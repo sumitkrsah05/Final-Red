@@ -1,0 +1,23 @@
+{
+  "CVE-2020-1938": {
+    "cvss": 9.8,
+    "epss": 0.974,
+    "cwe": "CWE-441",
+    "description": "Apache Tomcat AJP 'Ghostcat' file read/inclusion via the AJP connector.",
+    "references": ["https://tomcat.apache.org/security-9.html"]
+  },
+  "CVE-2017-12617": {
+    "cvss": 8.1,
+    "epss": 0.915,
+    "cwe": "CWE-434",
+    "description": "Apache Tomcat remote code execution via JSP upload when HTTP PUT is enabled.",
+    "references": ["https://tomcat.apache.org/security-9.html"]
+  },
+  "CVE-2021-44228": {
+    "cvss": 10.0,
+    "epss": 0.975,
+    "cwe": "CWE-502",
+    "description": "Apache Log4j2 JNDI 'Log4Shell' remote code execution.",
+    "references": ["https://logging.apache.org/log4j/2.x/security.html"]
+  }
+}

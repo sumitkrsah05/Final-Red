@@ -1,0 +1,28 @@
+# Local MITRE ATT&CK mapping rules. A finding is mapped to techniques when any
+# of its `match` keywords appear in the finding title/description/tags/service.
+# Offline: no call to attack.mitre.org at runtime; this is the local bundle.
+rules:
+  - match: ["exposed", "manager", "public-facing", "admin panel", "default credential"]
+    technique_id: "T1190"
+    name: "Exploit Public-Facing Application"
+    tactic: "Initial Access"
+  - match: ["xss", "cross-site scripting", "reflected"]
+    technique_id: "T1189"
+    name: "Drive-by Compromise"
+    tactic: "Initial Access"
+  - match: ["sql injection", "sqli", "injection point"]
+    technique_id: "T1190"
+    name: "Exploit Public-Facing Application"
+    tactic: "Initial Access"
+  - match: ["port", "service", "open port", "nmap"]
+    technique_id: "T1046"
+    name: "Network Service Discovery"
+    tactic: "Discovery"
+  - match: ["directory", "content discovery", "hidden path", "gobuster"]
+    technique_id: "T1595"
+    name: "Active Scanning"
+    tactic: "Reconnaissance"
+  - match: ["rce", "remote code execution", "deserialization", "log4shell", "ghostcat"]
+    technique_id: "T1203"
+    name: "Exploitation for Client Execution"
+    tactic: "Execution"

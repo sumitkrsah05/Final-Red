@@ -1,0 +1,44 @@
+# Rules of Engagement (ROE) — the contract that bounds an engagement.
+# The scope guard validates this before the graph starts and re-checks every
+# target at runtime. Fail-closed: anything not explicitly in scope is out of scope.
+
+engagement:
+  id: "eng-2026-demo-001"
+  owner: "void"
+  authorised_by: "<manager-name>"
+  authorisation_ref: "JIRA-SEC-1234"      # ticket / signed approval reference
+  mode: "black_box"                        # black_box | gray_box | white_box
+  profile: "non_destructive"               # only default-enabled profile
+
+scope:
+  in_scope:
+    domains:
+      - "demo-app.esds-lab.internal"
+    cidrs:
+      - "10.20.30.0/24"
+    cloud_accounts: []                     # gray-box only
+    repos: []                              # white-box only
+  exclusions:                              # never touched, even if inside a range above
+    hosts:
+      - "10.20.30.5"                       # e.g. prod gateway
+    paths:
+      - "/billing/*"
+
+windows:
+  timezone: "Asia/Kolkata"
+  allowed:
+    - days: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+      start: "02:00"
+      end: "04:00"
+
+approvers:                                 # who may authorise active-validate steps
+  - "void"
+
+budget:
+  max_requests_per_second_per_target: 10
+  max_concurrency_per_target: 4
+  max_total_actions: 500                   # hard engagement ceiling
+
+# Notes:
+# - No 'destructive' actions can be enabled here; that class is not loadable.
+# - Out-of-scope target, expired window, or missing authorisation_ref => hard block.

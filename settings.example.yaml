@@ -1,0 +1,40 @@
+# Platform settings. Secrets are NEVER inlined here — they are read from the
+# environment / sovereign secret store. Values below are placeholders.
+
+llm:
+  # Production target: Qwen3-32B on ESDS sovereign inference.
+  # Dev/test: the Modal-hosted qwen3.5-9b endpoint (OpenAI-compatible).
+  model: "${SAFEGUARD_LLM_MODEL:-qwen3-32b}"
+  base_url: "${SAFEGUARD_LLM_BASE_URL}"        # e.g. https://<sovereign-endpoint>/v1
+  api_key_env: "SAFEGUARD_LLM_API_KEY"         # read from env, not stored here
+  per_node_profiles:
+    planner:    { reasoning: true,  temperature: 0.2 }   # hybrid thinking ON
+    extract:    { reasoning: false, temperature: 0.0 }   # cheap, deterministic
+    reporter:   { reasoning: true,  temperature: 0.3 }
+  numeric_verifier: { enabled: true }          # zero-tolerance on ungrounded numbers
+
+intel:
+  cve_backend: "local_nvd_mirror"              # no external NVD calls at runtime
+  attack_backend: "local_stix_bundle"
+  epss: "local"
+
+detection_oracle:                              # all connectors READ-ONLY
+  wazuh:    { url: "${SAFEGUARD_WAZUH_URL}",  auth_env: "SAFEGUARD_WAZUH_TOKEN" }
+  waf:      { source: "coraza-logs" }          # ModSecurity/Coraza
+  edr:      { source: "${SAFEGUARD_EDR_ENDPOINT}" }
+  pam:      { source: "nandi", read_only: true }
+  dam:      { source: "jatayoo", read_only: true }
+  correlation_window_seconds: 300
+
+sandbox:
+  runtime: "gvisor"                            # or "firecracker"
+  egress: "roe-pinned"                         # can only reach in-scope targets
+
+limits:
+  global_kill_switch_enabled: true
+  default_max_actions: 500
+
+audit:
+  backend: "append_only_hash_chain"
+  retention_days: 365
+  residency: "in_country"

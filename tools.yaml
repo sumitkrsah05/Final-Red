@@ -1,0 +1,64 @@
+# Tool registry. Each tool declares its SAFETY CLASS, which the safety layer
+# enforces. The class is a property of the binding here — the LLM cannot assert,
+# change, or override it. 'destructive' is intentionally absent (not loadable).
+#
+# Classes:
+#   passive          -> observe only; rate-limit only
+#   active-recon     -> active but benign probes; rate-limit
+#   active-validate  -> non-destructive signal confirmation; APPROVAL + rate-limit
+#   destructive      -> DISABLED, not present in this file, cannot be enabled
+
+tools:
+  # --- passive ---
+  cve_lookup:
+    class: passive
+    backend: local_nvd_mirror
+    sandbox: none
+
+  # --- active-recon ---
+  nmap:
+    class: active-recon
+    sandbox: recon-runner
+    default_flags: ["-sV", "-T3"]          # no aggressive/DoS timing
+  httpx:
+    class: active-recon
+    sandbox: recon-runner
+  whatweb:
+    class: active-recon
+    sandbox: recon-runner
+  gobuster:
+    class: active-recon
+    sandbox: recon-runner
+  nuclei:
+    class: active-recon
+    sandbox: scan-runner
+    template_policy: "safe-only"           # excludes intrusive/DoS templates
+  nikto:
+    class: active-recon
+    sandbox: scan-runner
+  prowler:                                  # gray-box, read-only IAM
+    class: active-recon
+    sandbox: cloud-runner
+  trivy:
+    class: active-recon
+    sandbox: scan-runner
+  semgrep:                                  # white-box SAST
+    class: passive
+    sandbox: code-runner
+  gitleaks:                                 # white-box secrets
+    class: passive
+    sandbox: code-runner
+  checkov:                                  # white-box IaC
+    class: passive
+    sandbox: code-runner
+
+  # --- active-validate (approval-gated, non-destructive) ---
+  dalfox:
+    class: active-validate
+    sandbox: validate-runner
+    mode: "reflection-only"                # confirm reflected XSS, benign marker
+  sqlmap:
+    class: active-validate
+    sandbox: validate-runner
+    mode: "detection-only"                 # boolean/time technique; NO dump, NO os-shell
+    forbidden_flags: ["--dump", "--os-shell", "--os-cmd", "--file-write", "--sql-shell"]

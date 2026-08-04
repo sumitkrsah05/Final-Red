@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redblueai-safeguard"
+version = "0.1.0"
+description = "RedBlueAI Safeguard — autonomous, safety-gated red-team / breach-and-attack-simulation agent"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0",
+    "tzdata>=2024.1; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+safeguard = "safeguard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["safeguard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
