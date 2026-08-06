@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscan SYSTEM "/usr/share/doc/nikto/nikto.dtd">
+<niktoscan hoststest="0" options="-Format xml -output - -nointeractive -maxtime 120 -host demo.testfire.net" version="2.1.5" scanstart="Wed Aug  5 12:24:15 2026" scanend="Thu Jan  1 05:30:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="65.61.137.117" targethostname="demo.testfire.net" targetport="80" targetbanner="Apache-Coyote/1.1" starttime="2026-08-05 12:24:16" sitename="http://demo.testfire.net:80" siteip="http://65.61.137.117:80" hostheader="demo.testfire.net" errors="0" checks="6544">
+
+
+<item id="999960" osvdbid="0" osvdblink="http://osvdb.org/0" method="GET">
+<description><![CDATA[Cookie JSESSIONID created without the httponly flag]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80/]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80/]]></iplink>
+</item>
+
+<item id="999976" osvdbid="0" osvdblink="http://osvdb.org/0" method="GET">
+<description><![CDATA[The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80/]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80/]]></iplink>
+</item>
+
+<item id="999990" osvdbid="0" osvdblink="http://osvdb.org/0" method="OPTIONS">
+<description><![CDATA[Allowed HTTP Methods: GET, HEAD, POST, PUT, DELETE, OPTIONS ]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80/]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80/]]></iplink>
+</item>
+
+<item id="999978" osvdbid="397" osvdblink="http://osvdb.org/397" method="GET">
+<description><![CDATA[HTTP method ('Allow' Header): 'PUT' method could allow clients to save files on the web server.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80/]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80/]]></iplink>
+</item>
+
+<item id="999976" osvdbid="5646" osvdblink="http://osvdb.org/5646" method="GET">
+<description><![CDATA[HTTP method ('Allow' Header): 'DELETE' may allow clients to remove files on the web server.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80/]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80/]]></iplink>
+</item>
+
+<item id="999972" osvdbid="0" osvdblink="http://osvdb.org/0" method="DEBUG">
+<description><![CDATA[DEBUG HTTP verb may show server debugging information. See http://msdn.microsoft.com/en-us/library/e8z01xdh%28VS.80%29.aspx for details.]]></description>
+<uri><![CDATA[HASH(0x57d333f70ff8)]]></uri>
+<namelink><![CDATA[http://demo.testfire.net:80HASH(0x57d333f70ff8)]]></namelink>
+<iplink><![CDATA[http://65.61.137.117:80HASH(0x57d333f70ff8)]]></iplink>
+</item>
+
+<statistics elapsed="121" itemsfound="6" itemstested="6544" endtime="2026-08-05 12:26:17" />
+</scandetails>
+
+
+</niktoscan>

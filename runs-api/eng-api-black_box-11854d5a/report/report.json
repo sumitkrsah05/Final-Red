@@ -1,0 +1,511 @@
+{
+  "engagement_id": "eng-api-black_box-11854d5a",
+  "mode": "black_box",
+  "posture": {
+    "assets": 0,
+    "findings": 19,
+    "severity_counts": {
+      "medium": 1,
+      "low": 11,
+      "info": 7
+    },
+    "top_risk": 53.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-4a530993ed2a",
+      "title": "Prometheus Metrics - Detect",
+      "severity": "medium",
+      "asset": "http://localhost:3000/metrics",
+      "cve_ids": [],
+      "cvss": 5.3,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 53.0,
+      "priority": "medium",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-e02a3bfb4bfe",
+      "title": "Uncommon header 'access-control-allow-methods' found, with contents: GET,HEAD,PUT,PATCH,POST,DELETE",
+      "severity": "low",
+      "asset": "localhost*",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-85c6e02e51fe",
+      "title": "Server leaks inodes via ETags, header found with file /, fields: 0xW/26af 0x19fd0cae31d",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-3cf27afe2336",
+      "title": "Uncommon header 'access-control-allow-origin' found, with contents: *",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-ad6f268b18b0",
+      "title": "Uncommon header 'feature-policy' found, with contents: payment 'self'",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-839e21dceea3",
+      "title": "Uncommon header 'x-content-type-options' found, with contents: nosniff",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-2d54ce3c9e9c",
+      "title": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-0b33064c73e3",
+      "title": "Uncommon header 'x-recruiting' found, with contents: /#/jobs",
+      "severity": "low",
+      "asset": "localhost/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-0b6442a73a56",
+      "title": "File/dir '/ftp/' in robots.txt returned a non-forbidden or redirect HTTP code (200)",
+      "severity": "low",
+      "asset": "localhost//ftp/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-07adfe5213fb",
+      "title": "/ftp/: This might be interesting...",
+      "severity": "low",
+      "asset": "localhost/ftp/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-a1494d165cc5",
+      "title": "/public/: This might be interesting...",
+      "severity": "low",
+      "asset": "localhost/public/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-9ff3412c9fd2",
+      "title": "\"robots.txt\" contains 1 entry which should be manually viewed.",
+      "severity": "low",
+      "asset": "localhost/robots.txt",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nikto"
+      ]
+    },
+    {
+      "id": "find-88cad2144c78",
+      "title": "Add DOM EventListener - Detection",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1189"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-5e5970836ed3",
+      "title": "Deprecated Feature-Policy Header - Detection",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-565740f5d62e",
+      "title": "FingerprintHub Technology Fingerprint",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-a22dd4fd5e36",
+      "title": "HTTP Missing Security Headers",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-44f08a3e57b2",
+      "title": "OWASP Juice Shop",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-632c98c21561",
+      "title": "Wappalyzer Technology Detection",
+      "severity": "info",
+      "asset": "http://localhost:3000",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-78330fd1b73d",
+      "title": "Public Swagger API - Detect",
+      "severity": "info",
+      "asset": "http://localhost:3000/api-docs/swagger.yaml",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "localhost:3000",
+      "overall_risk": 53.0,
+      "steps": [
+        {
+          "finding_ref": "find-88cad2144c78",
+          "title": "Add DOM EventListener - Detection",
+          "technique_id": "T1189",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-5e5970836ed3",
+          "title": "Deprecated Feature-Policy Header - Detection",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-4a530993ed2a",
+          "title": "Prometheus Metrics - Detect",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 53.0
+        },
+        {
+          "finding_ref": "find-565740f5d62e",
+          "title": "FingerprintHub Technology Fingerprint",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-a22dd4fd5e36",
+          "title": "HTTP Missing Security Headers",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-44f08a3e57b2",
+          "title": "OWASP Juice Shop",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-632c98c21561",
+          "title": "Wappalyzer Technology Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-78330fd1b73d",
+          "title": "Public Swagger API - Detect",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    },
+    {
+      "asset": "localhost*",
+      "overall_risk": 30.0,
+      "steps": [
+        {
+          "finding_ref": "find-e02a3bfb4bfe",
+          "title": "Uncommon header 'access-control-allow-methods' found, with contents: GET,HEAD,PUT,PATCH,POST,DELETE",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        }
+      ]
+    },
+    {
+      "asset": "localhost",
+      "overall_risk": 30.0,
+      "steps": [
+        {
+          "finding_ref": "find-85c6e02e51fe",
+          "title": "Server leaks inodes via ETags, header found with file /, fields: 0xW/26af 0x19fd0cae31d",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-3cf27afe2336",
+          "title": "Uncommon header 'access-control-allow-origin' found, with contents: *",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-ad6f268b18b0",
+          "title": "Uncommon header 'feature-policy' found, with contents: payment 'self'",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-839e21dceea3",
+          "title": "Uncommon header 'x-content-type-options' found, with contents: nosniff",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-2d54ce3c9e9c",
+          "title": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-0b33064c73e3",
+          "title": "Uncommon header 'x-recruiting' found, with contents: /#/jobs",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-0b6442a73a56",
+          "title": "File/dir '/ftp/' in robots.txt returned a non-forbidden or redirect HTTP code (200)",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-07adfe5213fb",
+          "title": "/ftp/: This might be interesting...",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-a1494d165cc5",
+          "title": "/public/: This might be interesting...",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-9ff3412c9fd2",
+          "title": "\"robots.txt\" contains 1 entry which should be manually viewed.",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

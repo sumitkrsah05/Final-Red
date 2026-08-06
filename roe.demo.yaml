@@ -1,0 +1,36 @@
+# Focused ROE — authorised, non-destructive engagement against IBM's public
+# intentionally-vulnerable demo target (Altoro Mutual). Scoped to the single
+# domain so recon/scan do not touch the placeholder 10.20.30.0/24 range.
+engagement:
+  id: "eng-2026-demo-testfire"
+  owner: "void"
+  authorised_by: "rahul.rathaur"
+  authorisation_ref: "JIRA-SEC-1234"
+  mode: "black_box"
+  profile: "non_destructive"
+
+scope:
+  in_scope:
+    domains:
+      - "demo.testfire.net"
+    cidrs: []
+    cloud_accounts: []
+    repos: []
+  exclusions:
+    hosts: []
+    paths: []
+
+windows:
+  timezone: "Asia/Kolkata"
+  allowed:
+    - days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      start: "00:00"
+      end: "23:59"
+
+approvers:
+  - "void"
+
+budget:
+  max_requests_per_second_per_target: 10
+  max_concurrency_per_target: 4
+  max_total_actions: 500

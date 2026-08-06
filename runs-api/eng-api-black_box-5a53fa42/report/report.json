@@ -1,0 +1,161 @@
+{
+  "engagement_id": "eng-api-black_box-5a53fa42",
+  "mode": "black_box",
+  "posture": {
+    "assets": 0,
+    "findings": 5,
+    "severity_counts": {
+      "info": 5
+    },
+    "top_risk": 10.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-ab248a00d65d",
+      "title": "HTTP Missing Security Headers",
+      "severity": "info",
+      "asset": "http://localhost:5174",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-957843d2649a",
+      "title": "README.md file disclosure",
+      "severity": "info",
+      "asset": "http://localhost:5174/README.md",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-5526eae4ea16",
+      "title": "Visual Studio Code jsconfig.json - Detect",
+      "severity": "info",
+      "asset": "http://localhost:5174/jsconfig.json",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-0e3a4a7d783f",
+      "title": "NPM package.json Disclosure",
+      "severity": "info",
+      "asset": "http://localhost:5174/package-lock.json",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1190"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-2ddc03bb1180",
+      "title": "NPM package.json Disclosure",
+      "severity": "info",
+      "asset": "http://localhost:5174/package.json",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1190"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "localhost:5174",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-0e3a4a7d783f",
+          "title": "NPM package.json Disclosure",
+          "technique_id": "T1190",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-2ddc03bb1180",
+          "title": "NPM package.json Disclosure",
+          "technique_id": "T1190",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-ab248a00d65d",
+          "title": "HTTP Missing Security Headers",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-957843d2649a",
+          "title": "README.md file disclosure",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-5526eae4ea16",
+          "title": "Visual Studio Code jsconfig.json - Detect",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

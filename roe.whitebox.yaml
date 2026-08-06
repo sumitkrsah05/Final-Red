@@ -1,0 +1,34 @@
+# White-box ROE — source-level engagement (SAST + secrets + IaC scanning).
+engagement:
+  id: "eng-whitebox-demo"
+  owner: "operator"
+  authorised_by: "operator"
+  authorisation_ref: "AUTO-WHITEBOX"
+  mode: "white_box"                 # <- selects semgrep/gitleaks/checkov/trivy over scope.repos
+  profile: "non_destructive"
+
+scope:
+  in_scope:
+    domains: []
+    cidrs: []
+    cloud_accounts: []
+    repos:
+      - "/home/sumit/Desktop/RedAgent/redAgent"   # the codebase under test
+  exclusions:
+    hosts: []
+    paths: []
+
+windows:
+  timezone: "Asia/Kolkata"
+  allowed:
+    - days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      start: "00:00"
+      end: "23:59"
+
+approvers:
+  - "operator"
+
+budget:
+  max_requests_per_second_per_target: 10
+  max_concurrency_per_target: 4
+  max_total_actions: 500

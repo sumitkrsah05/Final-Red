@@ -44,6 +44,7 @@ class Orchestrator:
         checkpointer: Optional[Checkpointer] = None,
         oracle: Optional["DetectionOracle"] = None,
         recon_plan: Optional[list[str]] = None,
+        recon_params: Optional[dict[str, dict]] = None,
         scan_plan: Optional[list[str]] = None,
         thread_id: Optional[str] = None,
     ) -> "Orchestrator":
@@ -56,7 +57,7 @@ class Orchestrator:
             roe=roe, recon=recon, scan=scan, planner=planner,
             approvals=engagement.approvals, audit=engagement.audit,
             validate_flow=validate, oracle=oracle,
-            recon_plan=recon_plan, scan_plan=scan_plan,
+            recon_plan=recon_plan, recon_params=recon_params, scan_plan=scan_plan,
             now_iso=datetime.now(tz).isoformat(),
         )
         compiled = graph_def.compile(checkpointer or InMemoryCheckpointer())

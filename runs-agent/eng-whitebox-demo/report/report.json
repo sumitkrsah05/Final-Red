@@ -1,0 +1,111 @@
+{
+  "engagement_id": "eng-whitebox-demo",
+  "mode": "white_box",
+  "posture": {
+    "assets": 0,
+    "findings": 3,
+    "severity_counts": {
+      "medium": 3
+    },
+    "top_risk": 50.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-20eb2bc6a5ab",
+      "title": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/llm/client.py:103",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/RedAgent/redAgent/safeguard/llm/client.py:103",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "semgrep"
+      ]
+    },
+    {
+      "id": "find-eaab3fab1010",
+      "title": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1 @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:63",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:63",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "semgrep"
+      ]
+    },
+    {
+      "id": "find-77a5db92b9ac",
+      "title": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1 @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:88",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:88",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "semgrep"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "",
+      "overall_risk": 50.0,
+      "steps": [
+        {
+          "finding_ref": "find-20eb2bc6a5ab",
+          "title": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/llm/client.py:103",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        },
+        {
+          "finding_ref": "find-eaab3fab1010",
+          "title": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1 @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:63",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        },
+        {
+          "finding_ref": "find-77a5db92b9ac",
+          "title": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1 @ /home/sumit/Desktop/RedAgent/redAgent/safeguard/tools/schema.py:88",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

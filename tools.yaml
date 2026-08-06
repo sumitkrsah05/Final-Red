@@ -33,9 +33,23 @@ tools:
     class: active-recon
     sandbox: scan-runner
     template_policy: "safe-only"           # excludes intrusive/DoS templates
+    # Bounded, fast profile: focused tag set + perf tuning so a single-host web
+    # scan finishes in ~1-2 min instead of loading the whole template store.
+    default_flags:
+      - "-tags"
+      - "tomcat,apache,exposure,misconfig,tech,cve,ssl,xss,sqli,default-login,headers"
+      - "-timeout"
+      - "5"
+      - "-retries"
+      - "1"
+      - "-rl"
+      - "150"
+      - "-c"
+      - "50"
   nikto:
     class: active-recon
     sandbox: scan-runner
+    default_flags: ["-maxtime", "120"]     # bound the scan (non-destructive)
   prowler:                                  # gray-box, read-only IAM
     class: active-recon
     sandbox: cloud-runner

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "[Safeguard] javascript.lang.security.detect-insecure-websocket.detect-insecure-websocket @ /home/sumit/Desktop/Project/test_agent_2/agent2/agent/dashboard.py:399 (high)",
+    "severity": "high",
+    "body": "Asset: /home/sumit/Desktop/Project/test_agent_2/agent2/agent/dashboard.py:399\nRisk: 75.0\nDetection: UNKNOWN\nCVEs: \nATT&CK: ",
+    "labels": [
+      "safeguard",
+      "high",
+      "detected"
+    ]
+  }
+]

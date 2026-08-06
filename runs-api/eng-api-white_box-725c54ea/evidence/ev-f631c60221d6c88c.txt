@@ -1,0 +1,10 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.71.2"
+  },
+  "ReportID": "019fd5b9-f646-7b4b-88a2-4ed8bc842d98",
+  "CreatedAt": "2026-08-06T11:49:22.054742079+05:30",
+  "ArtifactName": "/tmp/claude-1000/-home-sumit-Desktop-red-frontend-/fa398d78-d236-4ba5-8a10-e8ec85b5f698/scratchpad/tinyrepo",
+  "ArtifactType": "filesystem"
+}

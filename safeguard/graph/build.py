@@ -49,6 +49,7 @@ def build_engagement_graph(
     verifier: Optional["NumericClaimVerifier"] = None,
     oracle: Optional["DetectionOracle"] = None,
     recon_plan: Optional[list[str]] = None,
+    recon_params: Optional[dict[str, dict]] = None,
     scan_plan: Optional[list[str]] = None,
     now_iso: str = "1970-01-01T00:00:00",
 ) -> StateGraph:
@@ -114,7 +115,7 @@ def build_engagement_graph(
 
     def recon_node(state: AgentState) -> None:
         state.phase = "recon"
-        report = recon.run(state.targets, plan=recon_plan)
+        report = recon.run(state.targets, plan=recon_plan, params=recon_params)
         for a in report.inventory.assets():
             state.inventory.add(a)
         state.actions_spent += report.allowed_steps

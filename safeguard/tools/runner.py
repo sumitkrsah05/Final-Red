@@ -19,6 +19,15 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 
+def _as_text(value: object) -> str:
+    """Coerce subprocess output to str (it may be bytes on a timeout)."""
+    if value is None:
+        return ""
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return str(value)
+
+
 @dataclass
 class CommandResult:
     exit_code: int
@@ -99,10 +108,13 @@ class LocalSubprocessRunner(SandboxRunner):
                 check=False,
             )
         except subprocess.TimeoutExpired as exc:
+            # On timeout the partial output can come back as bytes even with
+            # text=True, so normalise to str — downstream (evidence hashing,
+            # parsing) assumes text.
             return CommandResult(
                 exit_code=124,
-                stdout=exc.stdout or "",
-                stderr=(exc.stderr or "") + "\n[timeout]",
+                stdout=_as_text(exc.stdout),
+                stderr=_as_text(exc.stderr) + "\n[timeout]",
                 timed_out=True,
             )
         return CommandResult(

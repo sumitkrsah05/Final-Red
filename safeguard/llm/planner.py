@@ -82,10 +82,22 @@ class LLMPlanner(Planner):
 
     SYSTEM = (
         "You are the planner for an authorised, non-destructive red-team "
-        "validation agent. Choose the single next action. You may only propose "
-        "tools from the allowed list. You never execute anything; you only "
-        "propose. Respond with a JSON object: "
-        '{"action": "recon|scan|validate|report", "tool": str|null, '
+        "validation agent operating against an explicitly in-scope target. "
+        "You drive the engagement one step at a time through this loop: "
+        "recon (discover hosts/services) -> scan (find vulnerabilities) -> "
+        "correlate (enrich findings with CVE/ATT&CK/risk) -> validate "
+        "(optionally confirm ONE high/critical finding non-destructively, "
+        "approval-gated) -> report. "
+        "Rules: (1) do recon before scan, and scan before correlate; "
+        "(2) only propose 'validate' after findings exist, choosing an "
+        "active-validate tool (e.g. dalfox) and a 'target' copied verbatim "
+        "from one of the listed findings' 'asset' value; "
+        "(3) only propose 'report' once scanning and correlation are done, or "
+        "when there is nothing useful left to do; "
+        "(4) you may only propose tools from allowed_tools; "
+        "(5) you never execute anything — you only propose. "
+        "Respond with a JSON object: "
+        '{"action": "recon|scan|correlate|validate|report", "tool": str|null, '
         '"target": str|null, "technique": str|null, "rationale": str, '
         '"requires_approval": bool}.'
     )
@@ -103,17 +115,58 @@ class LLMPlanner(Planner):
             data = json.loads(raw)
         except (LLMError, json.JSONDecodeError):
             return self.fallback.decide(state, roe)
-        return self._validate(data, state, roe)
+        decision = self._validate(data, state, roe)
+        # Anti-loop guard: recon/scan/correlate are one-shot pipeline stages. If
+        # the model re-proposes a stage that already ran (common when a stage
+        # yields nothing, e.g. dry-run recon finds 0 assets), advance the
+        # pipeline via the deterministic fallback instead of repeating forever.
+        if decision.action in {"recon", "scan", "correlate"} and _already_did(
+                state, decision.action):
+            return self.fallback.decide(state, roe)
+        # Anti-premature-report guard: a live black/gray-box surface must be
+        # reconned and scanned before a report is meaningful. If the model
+        # *deliberately* jumps straight to 'report' with the pipeline unfinished,
+        # defer to the deterministic policy so the engagement still does real
+        # work. Only applies when the model actually chose 'report' — not when an
+        # invalid proposal was downgraded to 'report' by _validate above.
+        if data.get("action") == "report" and decision.action == "report":
+            unfinished_recon = (
+                roe.mode.value in ("black_box", "gray_box")
+                and not _already_did(state, "recon"))
+            unfinished_scan = not _already_did(state, "scan")
+            if unfinished_recon or unfinished_scan:
+                return self.fallback.decide(state, roe)
+        return decision
 
     def _messages(self, state: AgentState, roe: RulesOfEngagement) -> list[dict]:
+        # Ground the decision in what was actually discovered: real asset
+        # addresses and the highest-severity findings (with the exact 'asset'
+        # string the model must copy into a validate 'target').
+        assets = [
+            (f"{a.address}:{a.port}" if a.port else a.address)
+            for a in state.inventory.assets()
+        ][:20]
+        top_findings = [
+            {"title": f.title, "severity": f.severity.value, "asset": f.asset_ref}
+            for f in sorted(
+                state.ledger.findings(),
+                key=lambda f: (f.severity not in _HIGH, f.title),
+            )
+        ][:15]
         summary = {
+            "target_scope": list(roe.scope.domains) + list(roe.scope.cidrs),
+            "mode": roe.mode.value,
             "phase": state.phase,
-            "assets": len(state.inventory),
-            "findings": len(state.ledger),
+            "assets_count": len(state.inventory),
+            "assets": assets,
+            "findings_count": len(state.ledger),
             "severity_counts": state.ledger.by_severity(),
+            "top_findings": top_findings,
             "allowed_tools": self.registry.runnable(),
             "profile": roe.profile,
             "history": [h.get("action") for h in state.plan_history],
+            "actions_spent": state.actions_spent,
+            "max_actions": state.max_actions,
         }
         return [
             {"role": "system", "content": self.SYSTEM},

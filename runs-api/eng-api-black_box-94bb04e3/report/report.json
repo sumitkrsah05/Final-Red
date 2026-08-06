@@ -1,0 +1,166 @@
+{
+  "engagement_id": "eng-api-black_box-94bb04e3",
+  "mode": "black_box",
+  "posture": {
+    "assets": 3,
+    "findings": 5,
+    "severity_counts": {
+      "low": 1,
+      "info": 4
+    },
+    "top_risk": 30.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-3bd4da4e7c07",
+      "title": "Weak Cipher Suites Detection",
+      "severity": "low",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-45dc6bd1e595",
+      "title": "Deprecated TLS Detection",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-5e7f42be4802",
+      "title": "TLS Version - Detect",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-50364ffa6b5c",
+      "title": "WAF Detection",
+      "severity": "info",
+      "asset": "https://demo.testfire.net",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-6c0dd233cbae",
+      "title": "Public Swagger API - Detect",
+      "severity": "info",
+      "asset": "https://demo.testfire.net/swagger/index.html",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "demo.testfire.net:443",
+      "overall_risk": 30.0,
+      "steps": [
+        {
+          "finding_ref": "find-5e7f42be4802",
+          "title": "TLS Version - Detect",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-3bd4da4e7c07",
+          "title": "Weak Cipher Suites Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-45dc6bd1e595",
+          "title": "Deprecated TLS Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    },
+    {
+      "asset": "demo.testfire.net",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-50364ffa6b5c",
+          "title": "WAF Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-6c0dd233cbae",
+          "title": "Public Swagger API - Detect",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

@@ -34,7 +34,7 @@ class NodeProfile:
 
 # Sensible defaults mirroring settings.example.yaml per_node_profiles.
 PROFILES = {
-    "planner": NodeProfile(reasoning=True, temperature=0.2, max_tokens=1536),
+    "planner": NodeProfile(reasoning=True, temperature=0.2, max_tokens=4096),
     "extract": NodeProfile(reasoning=False, temperature=0.0, max_tokens=1024),
     "reporter": NodeProfile(reasoning=True, temperature=0.3, max_tokens=2048),
 }
@@ -47,7 +47,7 @@ class LLMClient:
         model: str,
         base_url: Optional[str],
         api_key_env: str = "SAFEGUARD_LLM_API_KEY",
-        timeout: float = 60.0,
+        timeout: float = 180.0,   # tolerate serverless cold starts (Modal scale-to-zero)
     ) -> None:
         self.model = model
         self.base_url = (base_url or "").rstrip("/")
@@ -83,8 +83,10 @@ class LLMClient:
             "temperature": prof.temperature,
             "max_tokens": prof.max_tokens,
         }
-        # Qwen hybrid-thinking toggle (endpoint-specific; harmless if ignored).
-        payload["extra_body"] = {"enable_thinking": prof.reasoning}
+        # Qwen hybrid-thinking toggle. vLLM applies it via the top-level
+        # ``chat_template_kwargs`` field (the older ``extra_body`` form is
+        # silently ignored by the server, which is why it must live here).
+        payload["chat_template_kwargs"] = {"enable_thinking": prof.reasoning}
         if response_json:
             payload["response_format"] = {"type": "json_object"}
 
@@ -103,6 +105,13 @@ class LLMClient:
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise LLMError(f"LLM request failed: {exc}") from exc
         try:
-            return body["choices"][0]["message"]["content"]
+            content = body["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError) as exc:
             raise LLMError(f"unexpected LLM response shape: {exc}") from exc
+        # Reasoning models can return a null/empty content when the token budget
+        # is spent on the thinking trace (finish_reason == "length"). Treat that
+        # as a failed call so callers fall back rather than crash on json.loads.
+        if not content:
+            finish = (body["choices"][0] or {}).get("finish_reason")
+            raise LLMError(f"empty LLM content (finish_reason={finish})")
+        return content

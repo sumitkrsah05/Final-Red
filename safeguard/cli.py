@@ -188,7 +188,7 @@ def _cmd_engage(args: argparse.Namespace) -> int:
 
 def _cmd_scope_check(args: argparse.Namespace) -> int:
     from safeguard.config.loader import load_roe
-    from safeguard.safety.scope_guard import ScopeGuard
+    from safeguard.safety.scope_guard import ScopeGuard, Target
     from safeguard.safety.exceptions import SafetyViolation
 
     roe = load_roe(_resolve(args.roe))

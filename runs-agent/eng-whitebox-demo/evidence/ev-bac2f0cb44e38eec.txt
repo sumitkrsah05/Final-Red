@@ -1,0 +1,19 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.71.2"
+  },
+  "ReportID": "019fd14b-4ff0-7bcd-aea8-46168cb60786",
+  "CreatedAt": "2026-08-05T15:10:01.648776765+05:30",
+  "ArtifactID": "sha256:7fc0976255241e94b2b33ff27008b4bd7761497446c03aee3a4ad1aaab31d3aa",
+  "ArtifactName": "/home/sumit/Desktop/RedAgent/redAgent",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/hypernullvoid-spec/redAgent.git",
+    "Branch": "main",
+    "Commit": "9e1cd2f2ac4ff7475afcf1b806682c39ae54e882",
+    "CommitMsg": "running.md done",
+    "Author": "Rahul Rathaur \u003cRahul.Rathaur@esds.co.in\u003e",
+    "Committer": "Rahul Rathaur \u003cRahul.Rathaur@esds.co.in\u003e"
+  }
+}

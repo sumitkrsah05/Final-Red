@@ -1,0 +1,78 @@
+
+====================================================================
+AUTONOMOUS RED-TEAM AGENT  →  localhost
+====================================================================
+ROE (authorisation): runs-agent/eng-agent-localhost/roe.generated.yaml
+planner: LLM  model=qwen-agentworld-35b-a3b
+         https://elixiordarkx--qwen-agentworld-35b-a3b-serve.modal.run/v1
+mode=black_box  profile=non_destructive  scope=['localhost']
+scan target: http://localhost:3000  (explicit port carried through)
+
+====================================================================
+AGENT THINKING + ACTING (live)
+====================================================================
+
+====================================================================
+AGENT REASONING TRACE (plan history)
+====================================================================
+ 1. RECON  tool=nmap  target=localhost
+    ↳ Starting the engagement with reconnaissance to discover hosts and services on the in-scope target 'localhost'. Using nmap for initial port and service discovery.
+ 2. SCAN
+    ↳ assets known, no findings yet
+ 3. CORRELATE
+    ↳ Scan phase is complete with 19 findings identified. The next step in the engagement loop is to correlate these findings with CVE/ATT&CK/risk information to enrich the results before proceeding to validation or reporting.
+ 4. REPORT
+    ↳ Scanning and correlation phases are complete. The findings include 1 medium, 11 low, and 7 info severity issues, with no high or critical findings to validate non-destructively. Proceeding to generate the final report.
+
+====================================================================
+DISCOVERED ATTACK SURFACE
+====================================================================
+assets: 0
+
+====================================================================
+FINDINGS
+====================================================================
+total: 19  severity={'medium': 1, 'low': 11, 'info': 7}
+  - [medium] Prometheus Metrics - Detect  (http://localhost:3000/metrics)
+  - [low] Uncommon header 'access-control-allow-methods' found, with contents: GET,HEAD,PUT,PATCH,POST,DELETE  (localhost*)
+  - [low] Server leaks inodes via ETags, header found with file /, fields: 0xW/26af 0x19fd0cae31d  (localhost/)
+  - [low] Uncommon header 'access-control-allow-origin' found, with contents: *  (localhost/)
+  - [low] Uncommon header 'feature-policy' found, with contents: payment 'self'  (localhost/)
+  - [low] Uncommon header 'x-content-type-options' found, with contents: nosniff  (localhost/)
+  - [low] Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN  (localhost/)
+  - [low] Uncommon header 'x-recruiting' found, with contents: /#/jobs  (localhost/)
+  - [low] File/dir '/ftp/' in robots.txt returned a non-forbidden or redirect HTTP code (200)  (localhost//ftp/)
+  - [low] /ftp/: This might be interesting...  (localhost/ftp/)
+  - [low] /public/: This might be interesting...  (localhost/public/)
+  - [low] "robots.txt" contains 1 entry which should be manually viewed.  (localhost/robots.txt)
+  - [info] Add DOM EventListener - Detection  (http://localhost:3000)
+  - [info] Deprecated Feature-Policy Header - Detection  (http://localhost:3000)
+  - [info] FingerprintHub Technology Fingerprint  (http://localhost:3000)
+  - [info] HTTP Missing Security Headers  (http://localhost:3000)
+  - [info] OWASP Juice Shop  (http://localhost:3000)
+  - [info] Wappalyzer Technology Detection  (http://localhost:3000)
+  - [info] Public Swagger API - Detect  (http://localhost:3000/api-docs/swagger.json)
+
+====================================================================
+REPORT BUNDLE
+====================================================================
+  runs-agent/eng-agent-localhost/report/attack_heatmap.md
+  runs-agent/eng-agent-localhost/report/detection_gap_report.md
+  runs-agent/eng-agent-localhost/report/executive_summary.md
+  runs-agent/eng-agent-localhost/report/report.json
+  runs-agent/eng-agent-localhost/report/technical_report.md
+  handoff: runs-agent/eng-agent-localhost/handoff
+
+====================================================================
+SUMMARY
+====================================================================
+status              : complete
+assets discovered   : 0
+findings            : 19  {'medium': 1, 'low': 11, 'info': 7}
+top risk score      : 53.0
+attack paths        : 3
+validations         : 0
+detection coverage  : 0.0%  gaps=0
+audit chain         : head=a5f899dbf476191c…  events=17  intact=True
+
+Read: runs-agent/eng-agent-localhost/report/executive_summary.md

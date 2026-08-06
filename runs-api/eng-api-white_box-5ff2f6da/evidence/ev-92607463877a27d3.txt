@@ -1,0 +1,10 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.71.2"
+  },
+  "ReportID": "019fd167-7ec5-727e-94f2-479cb653500f",
+  "CreatedAt": "2026-08-05T15:40:48.645165097+05:30",
+  "ArtifactName": "/home/sumit/Desktop/RedAgent/redAgent/safeguard/llm",
+  "ArtifactType": "filesystem"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Aug  6 10:48:15 2026 as: nmap -sV -T3 -p 80,443 -oX - demo.testfire.net -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - demo.testfire.net" start="1785993495" startstr="Thu Aug  6 10:48:15 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="65.61.137.117" addrtype="ipv4"/>
+<hostnames>
+<hostname name="demo.testfire.net" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1785993497" endtime="1785993516"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="65.61.137.117" addrtype="ipv4"/>
+<hostnames>
+<hostname name="demo.testfire.net" type="user"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" tunnel="ssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="331884" rttvar="226230" to="1236804"/>
+</host>
+<runstats><finished time="1785993516" timestr="Thu Aug  6 10:48:36 2026" summary="Nmap done at Thu Aug  6 10:48:36 2026; 1 IP address (1 host up) scanned in 20.41 seconds" elapsed="20.41" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
