@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Fri Aug  7 14:23:14 2026 as: nmap -sV -T3 -p 80,443 -oX - www.root-me.org -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - www.root-me.org" start="1786092794" startstr="Fri Aug  7 14:23:14 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="212.129.28.16" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.root-me.org" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1786092795" endtime="1786092821"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="212.129.28.16" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.root-me.org" type="user"/>
+<hostname name="www.root-me.org" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" product="HAProxy http proxy" version="2.0.0 or later" devicetype="load balancer" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" product="HAProxy http proxy" version="2.0.0 or later" devicetype="load balancer" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service></port>
+</ports>
+<times srtt="119754" rttvar="69370" to="397234"/>
+</host>
+<runstats><finished time="1786092821" timestr="Fri Aug  7 14:23:41 2026" summary="Nmap done at Fri Aug  7 14:23:41 2026; 1 IP address (1 host up) scanned in 26.97 seconds" elapsed="26.97" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

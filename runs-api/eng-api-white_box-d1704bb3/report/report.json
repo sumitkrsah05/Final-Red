@@ -1,0 +1,118 @@
+{
+  "engagement_id": "eng-api-white_box-d1704bb3",
+  "mode": "white_box",
+  "posture": {
+    "assets": 0,
+    "findings": 3,
+    "severity_counts": {
+      "medium": 3
+    },
+    "top_risk": 50.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-b6e9bda252f7",
+      "title": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2 @ /home/sumit/Desktop/swarn/src/swarn_analyst/nodes/reporting.py:133",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/swarn/src/swarn_analyst/nodes/reporting.py:133",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1189",
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "semgrep"
+      ]
+    },
+    {
+      "id": "find-a2cdee8b2159",
+      "title": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2 @ /home/sumit/Desktop/swarn/src/swarn_analyst/prompts/__init__.py:17",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/swarn/src/swarn_analyst/prompts/__init__.py:17",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1189"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "semgrep"
+      ]
+    },
+    {
+      "id": "find-57f76e251e0e",
+      "title": "CVE-2026-71433 in langgraph-checkpoint-sqlite",
+      "severity": "medium",
+      "asset": "/home/sumit/Desktop/swarn:langgraph-checkpoint-sqlite",
+      "cve_ids": [
+        "CVE-2026-71433"
+      ],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1190"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 50.0,
+      "priority": "medium",
+      "sources": [
+        "trivy"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "",
+      "overall_risk": 50.0,
+      "steps": [
+        {
+          "finding_ref": "find-b6e9bda252f7",
+          "title": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2 @ /home/sumit/Desktop/swarn/src/swarn_analyst/nodes/reporting.py:133",
+          "technique_id": "T1189",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        },
+        {
+          "finding_ref": "find-a2cdee8b2159",
+          "title": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2 @ /home/sumit/Desktop/swarn/src/swarn_analyst/prompts/__init__.py:17",
+          "technique_id": "T1189",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        },
+        {
+          "finding_ref": "find-57f76e251e0e",
+          "title": "CVE-2026-71433 in langgraph-checkpoint-sqlite",
+          "technique_id": "T1190",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 50.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

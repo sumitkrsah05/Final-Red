@@ -1,0 +1,1882 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.71.2"
+  },
+  "ReportID": "019fdac4-481b-7ef4-af05-723b304eca3f",
+  "CreatedAt": "2026-08-07T11:18:44.443982386+05:30",
+  "ArtifactID": "sha256:32919ab49f10b71284092c00b58868d9f7d0da2889a0cc6aac313680762b3477",
+  "ArtifactName": "/home/sumit/Desktop/swarn",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "Branch": "main",
+    "Commit": "bde5f89dfd335580df80dca9efcdd70beeb232ac",
+    "CommitMsg": "Ignore all .env variants except the template\n\nCo-Authored-By: Claude Fable 5 \u003cnoreply@anthropic.com\u003e",
+    "Author": "Sumit \u003csumitkrsah05@gmial.com\u003e",
+    "Committer": "Sumit \u003csumitkrsah05@gmial.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "uv.lock",
+      "Class": "lang-pkgs",
+      "Type": "uv",
+      "Packages": [
+        {
+          "ID": "swarn-analyst@0.1.0",
+          "Name": "swarn-analyst",
+          "Identifier": {
+            "PURL": "pkg:pypi/swarn-analyst@0.1.0",
+            "UID": "13bb9a2e1a144701"
+          },
+          "Version": "0.1.0",
+          "Relationship": "root",
+          "DependsOn": [
+            "charset-normalizer@3.4.9",
+            "docxtpl@0.20.2",
+            "duckdb@1.5.5",
+            "ipykernel@7.3.0",
+            "jinja2@3.1.6",
+            "jupyter-client@8.9.1",
+            "langchain-core@1.5.1",
+            "langchain-openai@1.4.1",
+            "langgraph-checkpoint-sqlite@3.1.0",
+            "langgraph@1.2.9",
+            "markdown@3.10.2",
+            "matplotlib@3.11.1",
+            "nbformat@5.10.4",
+            "numpy@2.5.1",
+            "openpyxl@3.1.5",
+            "pandas@3.0.5",
+            "pandera@0.32.1",
+            "polars@1.43.0",
+            "pyarrow@25.0.0",
+            "pydantic@2.13.4",
+            "pyyaml@6.0.3",
+            "scipy@1.18.0",
+            "sqlalchemy@2.0.51",
+            "statsmodels@0.14.6",
+            "weasyprint@69.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "charset-normalizer@3.4.9",
+          "Name": "charset-normalizer",
+          "Identifier": {
+            "PURL": "pkg:pypi/charset-normalizer@3.4.9",
+            "UID": "3c1a99fedad082e2"
+          },
+          "Version": "3.4.9",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "docxtpl@0.20.2",
+          "Name": "docxtpl",
+          "Identifier": {
+            "PURL": "pkg:pypi/docxtpl@0.20.2",
+            "UID": "3eb105962d4ddf62"
+          },
+          "Version": "0.20.2",
+          "Relationship": "direct",
+          "DependsOn": [
+            "jinja2@3.1.6",
+            "lxml@6.1.1",
+            "python-docx@1.2.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "duckdb@1.5.5",
+          "Name": "duckdb",
+          "Identifier": {
+            "PURL": "pkg:pypi/duckdb@1.5.5",
+            "UID": "9a547563855a58ac"
+          },
+          "Version": "1.5.5",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "ipykernel@7.3.0",
+          "Name": "ipykernel",
+          "Identifier": {
+            "PURL": "pkg:pypi/ipykernel@7.3.0",
+            "UID": "6311b18dc8937ba6"
+          },
+          "Version": "7.3.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "appnope@0.1.4",
+            "comm@0.2.3",
+            "debugpy@1.8.21",
+            "ipython@9.15.0",
+            "jupyter-client@8.9.1",
+            "jupyter-core@5.9.1",
+            "matplotlib-inline@0.2.2",
+            "nest-asyncio2@1.7.2",
+            "packaging@26.2",
+            "psutil@7.2.2",
+            "pyzmq@27.1.0",
+            "tornado@6.5.7",
+            "traitlets@5.15.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jinja2@3.1.6",
+          "Name": "jinja2",
+          "Identifier": {
+            "PURL": "pkg:pypi/jinja2@3.1.6",
+            "UID": "66cd3de3b9e3a1ff"
+          },
+          "Version": "3.1.6",
+          "Relationship": "direct",
+          "DependsOn": [
+            "markupsafe@3.0.3"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jupyter-client@8.9.1",
+          "Name": "jupyter-client",
+          "Identifier": {
+            "PURL": "pkg:pypi/jupyter-client@8.9.1",
+            "UID": "2e25792f934a6572"
+          },
+          "Version": "8.9.1",
+          "Relationship": "direct",
+          "DependsOn": [
+            "jupyter-core@5.9.1",
+            "python-dateutil@2.9.0.post0",
+            "pyzmq@27.1.0",
+            "tornado@6.5.7",
+            "traitlets@5.15.1",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langchain-core@1.5.1",
+          "Name": "langchain-core",
+          "Identifier": {
+            "PURL": "pkg:pypi/langchain-core@1.5.1",
+            "UID": "905844b90472e289"
+          },
+          "Version": "1.5.1",
+          "Relationship": "direct",
+          "DependsOn": [
+            "jsonpatch@1.33",
+            "langchain-protocol@0.0.18",
+            "langsmith@0.10.10",
+            "packaging@26.2",
+            "pydantic@2.13.4",
+            "pyyaml@6.0.3",
+            "tenacity@9.1.4",
+            "typing-extensions@4.16.0",
+            "uuid-utils@0.17.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langchain-openai@1.4.1",
+          "Name": "langchain-openai",
+          "Identifier": {
+            "PURL": "pkg:pypi/langchain-openai@1.4.1",
+            "UID": "b815cf31607bdd44"
+          },
+          "Version": "1.4.1",
+          "Relationship": "direct",
+          "DependsOn": [
+            "langchain-core@1.5.1",
+            "openai@2.48.0",
+            "tiktoken@0.13.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langgraph@1.2.9",
+          "Name": "langgraph",
+          "Identifier": {
+            "PURL": "pkg:pypi/langgraph@1.2.9",
+            "UID": "286be0ea76162883"
+          },
+          "Version": "1.2.9",
+          "Relationship": "direct",
+          "DependsOn": [
+            "langchain-core@1.5.1",
+            "langgraph-checkpoint@4.1.1",
+            "langgraph-prebuilt@1.1.0",
+            "langgraph-sdk@0.4.2",
+            "pydantic@2.13.4",
+            "xxhash@3.8.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langgraph-checkpoint-sqlite@3.1.0",
+          "Name": "langgraph-checkpoint-sqlite",
+          "Identifier": {
+            "PURL": "pkg:pypi/langgraph-checkpoint-sqlite@3.1.0",
+            "UID": "81a118e632233ce2"
+          },
+          "Version": "3.1.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "aiosqlite@0.22.1",
+            "langgraph-checkpoint@4.1.1",
+            "sqlite-vec@0.1.9"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "markdown@3.10.2",
+          "Name": "markdown",
+          "Identifier": {
+            "PURL": "pkg:pypi/markdown@3.10.2",
+            "UID": "234c324a0bc446df"
+          },
+          "Version": "3.10.2",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "matplotlib@3.11.1",
+          "Name": "matplotlib",
+          "Identifier": {
+            "PURL": "pkg:pypi/matplotlib@3.11.1",
+            "UID": "c7a807a8a0fffa56"
+          },
+          "Version": "3.11.1",
+          "Relationship": "direct",
+          "DependsOn": [
+            "contourpy@1.3.3",
+            "cycler@0.12.1",
+            "fonttools@4.63.0",
+            "kiwisolver@1.5.0",
+            "numpy@2.5.1",
+            "packaging@26.2",
+            "pillow@12.3.0",
+            "pyparsing@3.3.2",
+            "python-dateutil@2.9.0.post0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "nbformat@5.10.4",
+          "Name": "nbformat",
+          "Identifier": {
+            "PURL": "pkg:pypi/nbformat@5.10.4",
+            "UID": "c221c341565f4786"
+          },
+          "Version": "5.10.4",
+          "Relationship": "direct",
+          "DependsOn": [
+            "fastjsonschema@2.22.0",
+            "jsonschema@4.26.0",
+            "jupyter-core@5.9.1",
+            "traitlets@5.15.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "numpy@2.5.1",
+          "Name": "numpy",
+          "Identifier": {
+            "PURL": "pkg:pypi/numpy@2.5.1",
+            "UID": "4696d034318985fd"
+          },
+          "Version": "2.5.1",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "openpyxl@3.1.5",
+          "Name": "openpyxl",
+          "Identifier": {
+            "PURL": "pkg:pypi/openpyxl@3.1.5",
+            "UID": "6bc6dc5708d364a3"
+          },
+          "Version": "3.1.5",
+          "Relationship": "direct",
+          "DependsOn": [
+            "et-xmlfile@2.0.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pandas@3.0.5",
+          "Name": "pandas",
+          "Identifier": {
+            "PURL": "pkg:pypi/pandas@3.0.5",
+            "UID": "20d4adb4c5dc222"
+          },
+          "Version": "3.0.5",
+          "Relationship": "direct",
+          "DependsOn": [
+            "numpy@2.5.1",
+            "python-dateutil@2.9.0.post0",
+            "tzdata@2026.3"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pandera@0.32.1",
+          "Name": "pandera",
+          "Identifier": {
+            "PURL": "pkg:pypi/pandera@0.32.1",
+            "UID": "90388e32a6071914"
+          },
+          "Version": "0.32.1",
+          "Relationship": "direct",
+          "DependsOn": [
+            "packaging@26.2",
+            "pydantic@2.13.4",
+            "typeguard@4.6.0",
+            "typing-extensions@4.16.0",
+            "typing-inspect@0.9.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "polars@1.43.0",
+          "Name": "polars",
+          "Identifier": {
+            "PURL": "pkg:pypi/polars@1.43.0",
+            "UID": "f62a5c03452eb7a6"
+          },
+          "Version": "1.43.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "polars-runtime-32@1.43.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pyarrow@25.0.0",
+          "Name": "pyarrow",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyarrow@25.0.0",
+            "UID": "2c871967a47a5839"
+          },
+          "Version": "25.0.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pydantic@2.13.4",
+          "Name": "pydantic",
+          "Identifier": {
+            "PURL": "pkg:pypi/pydantic@2.13.4",
+            "UID": "45387d095ac30b75"
+          },
+          "Version": "2.13.4",
+          "Relationship": "direct",
+          "DependsOn": [
+            "annotated-types@0.8.0",
+            "pydantic-core@2.46.4",
+            "typing-extensions@4.16.0",
+            "typing-inspection@0.4.2"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pyyaml@6.0.3",
+          "Name": "pyyaml",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyyaml@6.0.3",
+            "UID": "2a5eb4b41df473c2"
+          },
+          "Version": "6.0.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "scipy@1.18.0",
+          "Name": "scipy",
+          "Identifier": {
+            "PURL": "pkg:pypi/scipy@1.18.0",
+            "UID": "985575967b5f622f"
+          },
+          "Version": "1.18.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "numpy@2.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "sqlalchemy@2.0.51",
+          "Name": "sqlalchemy",
+          "Identifier": {
+            "PURL": "pkg:pypi/sqlalchemy@2.0.51",
+            "UID": "fb56e9785ef82094"
+          },
+          "Version": "2.0.51",
+          "Relationship": "direct",
+          "DependsOn": [
+            "greenlet@3.5.4",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "statsmodels@0.14.6",
+          "Name": "statsmodels",
+          "Identifier": {
+            "PURL": "pkg:pypi/statsmodels@0.14.6",
+            "UID": "db5094953f1212c4"
+          },
+          "Version": "0.14.6",
+          "Relationship": "direct",
+          "DependsOn": [
+            "numpy@2.5.1",
+            "packaging@26.2",
+            "pandas@3.0.5",
+            "patsy@1.0.2",
+            "scipy@1.18.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "weasyprint@69.0",
+          "Name": "weasyprint",
+          "Identifier": {
+            "PURL": "pkg:pypi/weasyprint@69.0",
+            "UID": "334e4487b4913a37"
+          },
+          "Version": "69.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "cffi@2.1.0",
+            "cssselect2@0.9.0",
+            "fonttools@4.63.0",
+            "pillow@12.3.0",
+            "pydyf@0.12.1",
+            "pyphen@0.17.2",
+            "tinycss2@1.5.1",
+            "tinyhtml5@2.1.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "aiosqlite@0.22.1",
+          "Name": "aiosqlite",
+          "Identifier": {
+            "PURL": "pkg:pypi/aiosqlite@0.22.1",
+            "UID": "eb4eec714b05a786"
+          },
+          "Version": "0.22.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "annotated-types@0.8.0",
+          "Name": "annotated-types",
+          "Identifier": {
+            "PURL": "pkg:pypi/annotated-types@0.8.0",
+            "UID": "628450cec6fe2976"
+          },
+          "Version": "0.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "anyio@4.14.2",
+          "Name": "anyio",
+          "Identifier": {
+            "PURL": "pkg:pypi/anyio@4.14.2",
+            "UID": "96760bc2b7ac29c1"
+          },
+          "Version": "4.14.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "idna@3.18",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "appnope@0.1.4",
+          "Name": "appnope",
+          "Identifier": {
+            "PURL": "pkg:pypi/appnope@0.1.4",
+            "UID": "ee4ca81f507a3d2d"
+          },
+          "Version": "0.1.4",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "asttokens@3.0.2",
+          "Name": "asttokens",
+          "Identifier": {
+            "PURL": "pkg:pypi/asttokens@3.0.2",
+            "UID": "dda759a0569b67d2"
+          },
+          "Version": "3.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "attrs@26.1.0",
+          "Name": "attrs",
+          "Identifier": {
+            "PURL": "pkg:pypi/attrs@26.1.0",
+            "UID": "2910de77ff6d92f1"
+          },
+          "Version": "26.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "brotli@1.2.0",
+          "Name": "brotli",
+          "Identifier": {
+            "PURL": "pkg:pypi/brotli@1.2.0",
+            "UID": "acd9f05e8c7c4b74"
+          },
+          "Version": "1.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "brotlicffi@1.2.0.1",
+          "Name": "brotlicffi",
+          "Identifier": {
+            "PURL": "pkg:pypi/brotlicffi@1.2.0.1",
+            "UID": "20079371a2611f2f"
+          },
+          "Version": "1.2.0.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "cffi@2.1.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "certifi@2026.7.22",
+          "Name": "certifi",
+          "Identifier": {
+            "PURL": "pkg:pypi/certifi@2026.7.22",
+            "UID": "9a01233006514e04"
+          },
+          "Version": "2026.7.22",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "cffi@2.1.0",
+          "Name": "cffi",
+          "Identifier": {
+            "PURL": "pkg:pypi/cffi@2.1.0",
+            "UID": "710ec55cdedbc625"
+          },
+          "Version": "2.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "pycparser@3.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "colorama@0.4.6",
+          "Name": "colorama",
+          "Identifier": {
+            "PURL": "pkg:pypi/colorama@0.4.6",
+            "UID": "a9b0f41cf3bb79cc"
+          },
+          "Version": "0.4.6",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "comm@0.2.3",
+          "Name": "comm",
+          "Identifier": {
+            "PURL": "pkg:pypi/comm@0.2.3",
+            "UID": "adbb553c94ddfbd3"
+          },
+          "Version": "0.2.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "contourpy@1.3.3",
+          "Name": "contourpy",
+          "Identifier": {
+            "PURL": "pkg:pypi/contourpy@1.3.3",
+            "UID": "d5bba2e7ea994092"
+          },
+          "Version": "1.3.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "numpy@2.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "cssselect2@0.9.0",
+          "Name": "cssselect2",
+          "Identifier": {
+            "PURL": "pkg:pypi/cssselect2@0.9.0",
+            "UID": "70afa14bae638fe1"
+          },
+          "Version": "0.9.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "tinycss2@1.5.1",
+            "webencodings@0.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "cycler@0.12.1",
+          "Name": "cycler",
+          "Identifier": {
+            "PURL": "pkg:pypi/cycler@0.12.1",
+            "UID": "4b3e03bd63b7edf5"
+          },
+          "Version": "0.12.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "debugpy@1.8.21",
+          "Name": "debugpy",
+          "Identifier": {
+            "PURL": "pkg:pypi/debugpy@1.8.21",
+            "UID": "c1acb2e01e09619d"
+          },
+          "Version": "1.8.21",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "decorator@5.3.1",
+          "Name": "decorator",
+          "Identifier": {
+            "PURL": "pkg:pypi/decorator@5.3.1",
+            "UID": "4c8eb12e82afe3f6"
+          },
+          "Version": "5.3.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "distro@1.9.0",
+          "Name": "distro",
+          "Identifier": {
+            "PURL": "pkg:pypi/distro@1.9.0",
+            "UID": "22f853bfd9b90f72"
+          },
+          "Version": "1.9.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "et-xmlfile@2.0.0",
+          "Name": "et-xmlfile",
+          "Identifier": {
+            "PURL": "pkg:pypi/et-xmlfile@2.0.0",
+            "UID": "a12d6975f70faa69"
+          },
+          "Version": "2.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "executing@2.2.1",
+          "Name": "executing",
+          "Identifier": {
+            "PURL": "pkg:pypi/executing@2.2.1",
+            "UID": "4963e91355b766ec"
+          },
+          "Version": "2.2.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "fastjsonschema@2.22.0",
+          "Name": "fastjsonschema",
+          "Identifier": {
+            "PURL": "pkg:pypi/fastjsonschema@2.22.0",
+            "UID": "323b5de901db8e35"
+          },
+          "Version": "2.22.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "fonttools@4.63.0",
+          "Name": "fonttools",
+          "Identifier": {
+            "PURL": "pkg:pypi/fonttools@4.63.0",
+            "UID": "d6e174c7990ec8fb"
+          },
+          "Version": "4.63.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "brotli@1.2.0",
+            "brotlicffi@1.2.0.1",
+            "zopfli@0.4.3"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "greenlet@3.5.4",
+          "Name": "greenlet",
+          "Identifier": {
+            "PURL": "pkg:pypi/greenlet@3.5.4",
+            "UID": "123c654361fe6ca9"
+          },
+          "Version": "3.5.4",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "h11@0.16.0",
+          "Name": "h11",
+          "Identifier": {
+            "PURL": "pkg:pypi/h11@0.16.0",
+            "UID": "d50a8db9ed31c7b5"
+          },
+          "Version": "0.16.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "httpcore@1.0.9",
+          "Name": "httpcore",
+          "Identifier": {
+            "PURL": "pkg:pypi/httpcore@1.0.9",
+            "UID": "e2f330ca89a87fa7"
+          },
+          "Version": "1.0.9",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "certifi@2026.7.22",
+            "h11@0.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "httpx@0.28.1",
+          "Name": "httpx",
+          "Identifier": {
+            "PURL": "pkg:pypi/httpx@0.28.1",
+            "UID": "2ac863dd26801dc3"
+          },
+          "Version": "0.28.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "anyio@4.14.2",
+            "certifi@2026.7.22",
+            "httpcore@1.0.9",
+            "idna@3.18"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "idna@3.18",
+          "Name": "idna",
+          "Identifier": {
+            "PURL": "pkg:pypi/idna@3.18",
+            "UID": "a9318485f449680"
+          },
+          "Version": "3.18",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "ipython@9.15.0",
+          "Name": "ipython",
+          "Identifier": {
+            "PURL": "pkg:pypi/ipython@9.15.0",
+            "UID": "634cf008be0a841e"
+          },
+          "Version": "9.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "colorama@0.4.6",
+            "decorator@5.3.1",
+            "ipython-pygments-lexers@1.1.1",
+            "jedi@0.20.0",
+            "matplotlib-inline@0.2.2",
+            "pexpect@4.9.0",
+            "prompt-toolkit@3.0.53",
+            "psutil@7.2.2",
+            "pygments@2.20.0",
+            "stack-data@0.6.3",
+            "traitlets@5.15.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "ipython-pygments-lexers@1.1.1",
+          "Name": "ipython-pygments-lexers",
+          "Identifier": {
+            "PURL": "pkg:pypi/ipython-pygments-lexers@1.1.1",
+            "UID": "2bcb758bb5d023af"
+          },
+          "Version": "1.1.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "pygments@2.20.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jedi@0.20.0",
+          "Name": "jedi",
+          "Identifier": {
+            "PURL": "pkg:pypi/jedi@0.20.0",
+            "UID": "793751880e6db482"
+          },
+          "Version": "0.20.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "parso@0.8.7"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jiter@0.16.0",
+          "Name": "jiter",
+          "Identifier": {
+            "PURL": "pkg:pypi/jiter@0.16.0",
+            "UID": "c20d3dbe3727d352"
+          },
+          "Version": "0.16.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jsonpatch@1.33",
+          "Name": "jsonpatch",
+          "Identifier": {
+            "PURL": "pkg:pypi/jsonpatch@1.33",
+            "UID": "15932b163930e5fa"
+          },
+          "Version": "1.33",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "jsonpointer@3.1.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jsonpointer@3.1.1",
+          "Name": "jsonpointer",
+          "Identifier": {
+            "PURL": "pkg:pypi/jsonpointer@3.1.1",
+            "UID": "16de606c35b00955"
+          },
+          "Version": "3.1.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jsonschema@4.26.0",
+          "Name": "jsonschema",
+          "Identifier": {
+            "PURL": "pkg:pypi/jsonschema@4.26.0",
+            "UID": "532b4a5ed727ecae"
+          },
+          "Version": "4.26.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "attrs@26.1.0",
+            "jsonschema-specifications@2025.9.1",
+            "referencing@0.37.0",
+            "rpds-py@2026.6.3"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jsonschema-specifications@2025.9.1",
+          "Name": "jsonschema-specifications",
+          "Identifier": {
+            "PURL": "pkg:pypi/jsonschema-specifications@2025.9.1",
+            "UID": "e7b469c5a674ceb2"
+          },
+          "Version": "2025.9.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "referencing@0.37.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "jupyter-core@5.9.1",
+          "Name": "jupyter-core",
+          "Identifier": {
+            "PURL": "pkg:pypi/jupyter-core@5.9.1",
+            "UID": "6c81265e2ee49d5f"
+          },
+          "Version": "5.9.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "platformdirs@4.11.0",
+            "traitlets@5.15.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "kiwisolver@1.5.0",
+          "Name": "kiwisolver",
+          "Identifier": {
+            "PURL": "pkg:pypi/kiwisolver@1.5.0",
+            "UID": "d7e6468df498b4f8"
+          },
+          "Version": "1.5.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langchain-protocol@0.0.18",
+          "Name": "langchain-protocol",
+          "Identifier": {
+            "PURL": "pkg:pypi/langchain-protocol@0.0.18",
+            "UID": "ca373bab2f6bcbc9"
+          },
+          "Version": "0.0.18",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langgraph-checkpoint@4.1.1",
+          "Name": "langgraph-checkpoint",
+          "Identifier": {
+            "PURL": "pkg:pypi/langgraph-checkpoint@4.1.1",
+            "UID": "83b85157883b3751"
+          },
+          "Version": "4.1.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "langchain-core@1.5.1",
+            "ormsgpack@1.12.2"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langgraph-prebuilt@1.1.0",
+          "Name": "langgraph-prebuilt",
+          "Identifier": {
+            "PURL": "pkg:pypi/langgraph-prebuilt@1.1.0",
+            "UID": "d32ac9410abaceaa"
+          },
+          "Version": "1.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "langchain-core@1.5.1",
+            "langgraph-checkpoint@4.1.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langgraph-sdk@0.4.2",
+          "Name": "langgraph-sdk",
+          "Identifier": {
+            "PURL": "pkg:pypi/langgraph-sdk@0.4.2",
+            "UID": "3898c730516c3ce2"
+          },
+          "Version": "0.4.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "httpx@0.28.1",
+            "langchain-core@1.5.1",
+            "langchain-protocol@0.0.18",
+            "orjson@3.11.9",
+            "websockets@15.0.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "langsmith@0.10.10",
+          "Name": "langsmith",
+          "Identifier": {
+            "PURL": "pkg:pypi/langsmith@0.10.10",
+            "UID": "5170fb192f68b125"
+          },
+          "Version": "0.10.10",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "anyio@4.14.2",
+            "distro@1.9.0",
+            "httpx@0.28.1",
+            "orjson@3.11.9",
+            "packaging@26.2",
+            "pydantic@2.13.4",
+            "requests-toolbelt@1.0.0",
+            "requests@2.34.2",
+            "sniffio@1.3.1",
+            "typing-extensions@4.16.0",
+            "uuid-utils@0.17.0",
+            "websockets@15.0.1",
+            "xxhash@3.8.1",
+            "zstandard@0.25.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "lxml@6.1.1",
+          "Name": "lxml",
+          "Identifier": {
+            "PURL": "pkg:pypi/lxml@6.1.1",
+            "UID": "bee6d4e91b32e0ea"
+          },
+          "Version": "6.1.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "markupsafe@3.0.3",
+          "Name": "markupsafe",
+          "Identifier": {
+            "PURL": "pkg:pypi/markupsafe@3.0.3",
+            "UID": "c97703c32c4879f7"
+          },
+          "Version": "3.0.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "matplotlib-inline@0.2.2",
+          "Name": "matplotlib-inline",
+          "Identifier": {
+            "PURL": "pkg:pypi/matplotlib-inline@0.2.2",
+            "UID": "e32c86a0177bd225"
+          },
+          "Version": "0.2.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "traitlets@5.15.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "mypy-extensions@1.1.0",
+          "Name": "mypy-extensions",
+          "Identifier": {
+            "PURL": "pkg:pypi/mypy-extensions@1.1.0",
+            "UID": "5d0c5240f9f8304e"
+          },
+          "Version": "1.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "nest-asyncio2@1.7.2",
+          "Name": "nest-asyncio2",
+          "Identifier": {
+            "PURL": "pkg:pypi/nest-asyncio2@1.7.2",
+            "UID": "9fad7cc9a87dee58"
+          },
+          "Version": "1.7.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "openai@2.48.0",
+          "Name": "openai",
+          "Identifier": {
+            "PURL": "pkg:pypi/openai@2.48.0",
+            "UID": "2d28a6e2d9b28aa6"
+          },
+          "Version": "2.48.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "anyio@4.14.2",
+            "distro@1.9.0",
+            "httpx@0.28.1",
+            "jiter@0.16.0",
+            "pydantic@2.13.4",
+            "sniffio@1.3.1",
+            "tqdm@4.69.1",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "orjson@3.11.9",
+          "Name": "orjson",
+          "Identifier": {
+            "PURL": "pkg:pypi/orjson@3.11.9",
+            "UID": "e3fbc14c6580b56e"
+          },
+          "Version": "3.11.9",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "ormsgpack@1.12.2",
+          "Name": "ormsgpack",
+          "Identifier": {
+            "PURL": "pkg:pypi/ormsgpack@1.12.2",
+            "UID": "c03e8faf35748ff8"
+          },
+          "Version": "1.12.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "packaging@26.2",
+          "Name": "packaging",
+          "Identifier": {
+            "PURL": "pkg:pypi/packaging@26.2",
+            "UID": "139d7b3635829535"
+          },
+          "Version": "26.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "parso@0.8.7",
+          "Name": "parso",
+          "Identifier": {
+            "PURL": "pkg:pypi/parso@0.8.7",
+            "UID": "4be075b0c418317a"
+          },
+          "Version": "0.8.7",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "patsy@1.0.2",
+          "Name": "patsy",
+          "Identifier": {
+            "PURL": "pkg:pypi/patsy@1.0.2",
+            "UID": "58288888d4659bc0"
+          },
+          "Version": "1.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "numpy@2.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pexpect@4.9.0",
+          "Name": "pexpect",
+          "Identifier": {
+            "PURL": "pkg:pypi/pexpect@4.9.0",
+            "UID": "b1f6cf5902518293"
+          },
+          "Version": "4.9.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "ptyprocess@0.7.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pillow@12.3.0",
+          "Name": "pillow",
+          "Identifier": {
+            "PURL": "pkg:pypi/pillow@12.3.0",
+            "UID": "bc13005675178526"
+          },
+          "Version": "12.3.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "platformdirs@4.11.0",
+          "Name": "platformdirs",
+          "Identifier": {
+            "PURL": "pkg:pypi/platformdirs@4.11.0",
+            "UID": "3c9dbd6d7078015a"
+          },
+          "Version": "4.11.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "polars-runtime-32@1.43.0",
+          "Name": "polars-runtime-32",
+          "Identifier": {
+            "PURL": "pkg:pypi/polars-runtime-32@1.43.0",
+            "UID": "d5eb006d40b30528"
+          },
+          "Version": "1.43.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "prompt-toolkit@3.0.53",
+          "Name": "prompt-toolkit",
+          "Identifier": {
+            "PURL": "pkg:pypi/prompt-toolkit@3.0.53",
+            "UID": "fd6f9452b5399afa"
+          },
+          "Version": "3.0.53",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "wcwidth@0.8.2"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "psutil@7.2.2",
+          "Name": "psutil",
+          "Identifier": {
+            "PURL": "pkg:pypi/psutil@7.2.2",
+            "UID": "b49c700e973259fe"
+          },
+          "Version": "7.2.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "ptyprocess@0.7.0",
+          "Name": "ptyprocess",
+          "Identifier": {
+            "PURL": "pkg:pypi/ptyprocess@0.7.0",
+            "UID": "79e3de78ef393e8c"
+          },
+          "Version": "0.7.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pure-eval@0.2.3",
+          "Name": "pure-eval",
+          "Identifier": {
+            "PURL": "pkg:pypi/pure-eval@0.2.3",
+            "UID": "b7c8070e4cab99dc"
+          },
+          "Version": "0.2.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pycparser@3.0",
+          "Name": "pycparser",
+          "Identifier": {
+            "PURL": "pkg:pypi/pycparser@3.0",
+            "UID": "c92284e7051d4ada"
+          },
+          "Version": "3.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pydantic-core@2.46.4",
+          "Name": "pydantic-core",
+          "Identifier": {
+            "PURL": "pkg:pypi/pydantic-core@2.46.4",
+            "UID": "f3e23ce4098ab203"
+          },
+          "Version": "2.46.4",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pydyf@0.12.1",
+          "Name": "pydyf",
+          "Identifier": {
+            "PURL": "pkg:pypi/pydyf@0.12.1",
+            "UID": "5ab04c66a2b48b21"
+          },
+          "Version": "0.12.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pygments@2.20.0",
+          "Name": "pygments",
+          "Identifier": {
+            "PURL": "pkg:pypi/pygments@2.20.0",
+            "UID": "a97e8b3301b61131"
+          },
+          "Version": "2.20.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pyparsing@3.3.2",
+          "Name": "pyparsing",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyparsing@3.3.2",
+            "UID": "da06b90908eab3ce"
+          },
+          "Version": "3.3.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pyphen@0.17.2",
+          "Name": "pyphen",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyphen@0.17.2",
+            "UID": "b9fd3d00209ae3cd"
+          },
+          "Version": "0.17.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "python-dateutil@2.9.0.post0",
+          "Name": "python-dateutil",
+          "Identifier": {
+            "PURL": "pkg:pypi/python-dateutil@2.9.0.post0",
+            "UID": "7ff8c30198898771"
+          },
+          "Version": "2.9.0.post0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "six@1.17.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "python-docx@1.2.0",
+          "Name": "python-docx",
+          "Identifier": {
+            "PURL": "pkg:pypi/python-docx@1.2.0",
+            "UID": "31017dfc7437fd7d"
+          },
+          "Version": "1.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "lxml@6.1.1",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "pyzmq@27.1.0",
+          "Name": "pyzmq",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyzmq@27.1.0",
+            "UID": "e5fc5881c5ed6393"
+          },
+          "Version": "27.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "cffi@2.1.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "referencing@0.37.0",
+          "Name": "referencing",
+          "Identifier": {
+            "PURL": "pkg:pypi/referencing@0.37.0",
+            "UID": "4282966d4be7affb"
+          },
+          "Version": "0.37.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "attrs@26.1.0",
+            "rpds-py@2026.6.3",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "regex@2026.7.19",
+          "Name": "regex",
+          "Identifier": {
+            "PURL": "pkg:pypi/regex@2026.7.19",
+            "UID": "64d352306e523264"
+          },
+          "Version": "2026.7.19",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "requests@2.34.2",
+          "Name": "requests",
+          "Identifier": {
+            "PURL": "pkg:pypi/requests@2.34.2",
+            "UID": "5f893dc0175699a1"
+          },
+          "Version": "2.34.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "certifi@2026.7.22",
+            "charset-normalizer@3.4.9",
+            "idna@3.18",
+            "urllib3@2.7.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "requests-toolbelt@1.0.0",
+          "Name": "requests-toolbelt",
+          "Identifier": {
+            "PURL": "pkg:pypi/requests-toolbelt@1.0.0",
+            "UID": "dc43730a502e188"
+          },
+          "Version": "1.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "requests@2.34.2"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "rpds-py@2026.6.3",
+          "Name": "rpds-py",
+          "Identifier": {
+            "PURL": "pkg:pypi/rpds-py@2026.6.3",
+            "UID": "839e58038e428e06"
+          },
+          "Version": "2026.6.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "six@1.17.0",
+          "Name": "six",
+          "Identifier": {
+            "PURL": "pkg:pypi/six@1.17.0",
+            "UID": "ac79dc21f2d40ee4"
+          },
+          "Version": "1.17.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "sniffio@1.3.1",
+          "Name": "sniffio",
+          "Identifier": {
+            "PURL": "pkg:pypi/sniffio@1.3.1",
+            "UID": "2b2bc555d7ea120"
+          },
+          "Version": "1.3.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "sqlite-vec@0.1.9",
+          "Name": "sqlite-vec",
+          "Identifier": {
+            "PURL": "pkg:pypi/sqlite-vec@0.1.9",
+            "UID": "8bca0def610e2e20"
+          },
+          "Version": "0.1.9",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "stack-data@0.6.3",
+          "Name": "stack-data",
+          "Identifier": {
+            "PURL": "pkg:pypi/stack-data@0.6.3",
+            "UID": "a465aa9faa7ae9aa"
+          },
+          "Version": "0.6.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "asttokens@3.0.2",
+            "executing@2.2.1",
+            "pure-eval@0.2.3"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tenacity@9.1.4",
+          "Name": "tenacity",
+          "Identifier": {
+            "PURL": "pkg:pypi/tenacity@9.1.4",
+            "UID": "f43afc0974e70bf8"
+          },
+          "Version": "9.1.4",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tiktoken@0.13.0",
+          "Name": "tiktoken",
+          "Identifier": {
+            "PURL": "pkg:pypi/tiktoken@0.13.0",
+            "UID": "40cebebbce3e408"
+          },
+          "Version": "0.13.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "regex@2026.7.19",
+            "requests@2.34.2"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tinycss2@1.5.1",
+          "Name": "tinycss2",
+          "Identifier": {
+            "PURL": "pkg:pypi/tinycss2@1.5.1",
+            "UID": "5f5bf54206e20b33"
+          },
+          "Version": "1.5.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "webencodings@0.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tinyhtml5@2.1.0",
+          "Name": "tinyhtml5",
+          "Identifier": {
+            "PURL": "pkg:pypi/tinyhtml5@2.1.0",
+            "UID": "4ca217870b9d5b8"
+          },
+          "Version": "2.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "webencodings@0.5.1"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tornado@6.5.7",
+          "Name": "tornado",
+          "Identifier": {
+            "PURL": "pkg:pypi/tornado@6.5.7",
+            "UID": "ba4623d8a9853bdd"
+          },
+          "Version": "6.5.7",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tqdm@4.69.1",
+          "Name": "tqdm",
+          "Identifier": {
+            "PURL": "pkg:pypi/tqdm@4.69.1",
+            "UID": "936bd9732eeb8184"
+          },
+          "Version": "4.69.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "colorama@0.4.6"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "traitlets@5.15.1",
+          "Name": "traitlets",
+          "Identifier": {
+            "PURL": "pkg:pypi/traitlets@5.15.1",
+            "UID": "786ce290eac48b7a"
+          },
+          "Version": "5.15.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "typeguard@4.6.0",
+          "Name": "typeguard",
+          "Identifier": {
+            "PURL": "pkg:pypi/typeguard@4.6.0",
+            "UID": "54d4a6c3c65a9d6"
+          },
+          "Version": "4.6.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "typing-extensions@4.16.0",
+          "Name": "typing-extensions",
+          "Identifier": {
+            "PURL": "pkg:pypi/typing-extensions@4.16.0",
+            "UID": "23fd9c45aea880bf"
+          },
+          "Version": "4.16.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "typing-inspect@0.9.0",
+          "Name": "typing-inspect",
+          "Identifier": {
+            "PURL": "pkg:pypi/typing-inspect@0.9.0",
+            "UID": "2c4aae94dcbba869"
+          },
+          "Version": "0.9.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "mypy-extensions@1.1.0",
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "typing-inspection@0.4.2",
+          "Name": "typing-inspection",
+          "Identifier": {
+            "PURL": "pkg:pypi/typing-inspection@0.4.2",
+            "UID": "cd6b80b143b76494"
+          },
+          "Version": "0.4.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "typing-extensions@4.16.0"
+          ],
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "tzdata@2026.3",
+          "Name": "tzdata",
+          "Identifier": {
+            "PURL": "pkg:pypi/tzdata@2026.3",
+            "UID": "f5ebfc90949876d1"
+          },
+          "Version": "2026.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "urllib3@2.7.0",
+          "Name": "urllib3",
+          "Identifier": {
+            "PURL": "pkg:pypi/urllib3@2.7.0",
+            "UID": "2aebb341a689f5c"
+          },
+          "Version": "2.7.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "uuid-utils@0.17.0",
+          "Name": "uuid-utils",
+          "Identifier": {
+            "PURL": "pkg:pypi/uuid-utils@0.17.0",
+            "UID": "f6652d67fa9d2245"
+          },
+          "Version": "0.17.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "wcwidth@0.8.2",
+          "Name": "wcwidth",
+          "Identifier": {
+            "PURL": "pkg:pypi/wcwidth@0.8.2",
+            "UID": "4ad247b8efc5fb6d"
+          },
+          "Version": "0.8.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "webencodings@0.5.1",
+          "Name": "webencodings",
+          "Identifier": {
+            "PURL": "pkg:pypi/webencodings@0.5.1",
+            "UID": "68511b951cc24266"
+          },
+          "Version": "0.5.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "websockets@15.0.1",
+          "Name": "websockets",
+          "Identifier": {
+            "PURL": "pkg:pypi/websockets@15.0.1",
+            "UID": "e0c1293464aafd65"
+          },
+          "Version": "15.0.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "xxhash@3.8.1",
+          "Name": "xxhash",
+          "Identifier": {
+            "PURL": "pkg:pypi/xxhash@3.8.1",
+            "UID": "55775bbfcde26058"
+          },
+          "Version": "3.8.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "zopfli@0.4.3",
+          "Name": "zopfli",
+          "Identifier": {
+            "PURL": "pkg:pypi/zopfli@0.4.3",
+            "UID": "4c3e2cc986129c28"
+          },
+          "Version": "0.4.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        },
+        {
+          "ID": "zstandard@0.25.0",
+          "Name": "zstandard",
+          "Identifier": {
+            "PURL": "pkg:pypi/zstandard@0.25.0",
+            "UID": "4a51e98e701fc643"
+          },
+          "Version": "0.25.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "uv"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-71433",
+          "VendorIDs": [
+            "GHSA-47pj-3jcm-6whg"
+          ],
+          "PkgID": "langgraph-checkpoint-sqlite@3.1.0",
+          "PkgName": "langgraph-checkpoint-sqlite",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/langgraph-checkpoint-sqlite@3.1.0",
+            "UID": "81a118e632233ce2"
+          },
+          "InstalledVersion": "3.1.0",
+          "FixedVersion": "3.1.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-71433",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:e9143d7234dbc242847f547563394dd022ff2d2beb381b5d597190fa07bb5bd0",
+          "Title": "LangGraph: Namespace prefix matching crosses segment boundaries in Postgres and SQLite stores",
+          "Description": "LangGraph Checkpoint Postgres and SQLite Checkpoint are the Postgres and SQLite implementations of LangGraph's checkpoint saver. Prior to 3.1.1, the langgraph-checkpoint-postgres and langgraph-checkpoint-sqlite packages persisted hierarchical namespaces as a dot joined string and scoped reads by matching that string as a simple prefix pattern, so a read scoped to one namespace could also match a sibling namespace whose flattened form shares the same leading characters, or a namespace label containing unescaped pattern metacharacters, allowing an authenticated caller to retrieve stored items belonging to another tenant or user through an ordinary scoped search or list namespaces call, with no crafted input required. This issue is fixed in versions 3.1.1 of langgraph-checkpoint-postgres and langgraph-checkpoint-sqlite.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-200",
+            "CWE-863"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://github.com/langchain-ai/langgraph",
+            "https://github.com/langchain-ai/langgraph/commit/66ebe1a0da921e73f0f9f879ba105d314c079f7c",
+            "https://github.com/langchain-ai/langgraph/pull/8478",
+            "https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres==3.1.1",
+            "https://github.com/langchain-ai/langgraph/releases/tag/checkpointsqlite==3.1.1",
+            "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-47pj-3jcm-6whg"
+          ],
+          "PublishedDate": "2026-08-06T22:18:30.107Z",
+          "LastModifiedDate": "2026-08-06T22:18:30.107Z"
+        }
+      ]
+    }
+  ]
+}

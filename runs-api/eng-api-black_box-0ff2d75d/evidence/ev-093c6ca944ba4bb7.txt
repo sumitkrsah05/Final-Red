@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Fri Aug  7 14:14:25 2026 as: nmap -sV -T3 -p 80,443 -oX - portswigger.net -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - portswigger.net" start="1786092265" startstr="Fri Aug  7 14:14:25 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="3.175.86.44" addrtype="ipv4"/>
+<hostnames>
+<hostname name="portswigger.net" type="user"/>
+</hostnames>
+</hosthint>
