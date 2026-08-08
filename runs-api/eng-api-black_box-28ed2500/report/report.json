@@ -1,0 +1,109 @@
+{
+  "engagement_id": "eng-api-black_box-28ed2500",
+  "mode": "black_box",
+  "posture": {
+    "assets": 0,
+    "findings": 3,
+    "severity_counts": {
+      "info": 3
+    },
+    "top_risk": 10.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-778632d6dc43",
+      "title": "CORS Misconfiguration",
+      "severity": "info",
+      "asset": "http://10.164.128.242:8080",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-3a724352748b",
+      "title": "HTTP Missing Security Headers",
+      "severity": "info",
+      "asset": "http://10.164.128.242:8080",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-e81568c8fbbf",
+      "title": "Wappalyzer Technology Detection",
+      "severity": "info",
+      "asset": "http://10.164.128.242:8080",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "10.164.128.242:8080",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-778632d6dc43",
+          "title": "CORS Misconfiguration",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-3a724352748b",
+          "title": "HTTP Missing Security Headers",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-e81568c8fbbf",
+          "title": "Wappalyzer Technology Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

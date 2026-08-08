@@ -46,7 +46,20 @@ class ScopeGuard:
     def __init__(self, roe: RulesOfEngagement) -> None:
         self.roe = roe
         self._networks = roe.scope.networks()
-        self._domains = tuple(d.lower().lstrip(".") for d in roe.scope.domains)
+        # A bare IP is a valid black-box target, but the ROE generators list the
+        # target host under ``domains`` regardless of whether it is a hostname or
+        # an IP. Domain matching (suffix-based) never matches an IP literal, so
+        # fold any IP that was listed as a "domain" into the network allowlist as
+        # a single-host network (/32 or /128) — otherwise IP targets fail-closed
+        # as OutOfScope even though they were explicitly authorised.
+        domains: list[str] = []
+        for d in roe.scope.domains:
+            d = d.lower().lstrip(".")
+            try:
+                self._networks.append(ipaddress.ip_network(d, strict=False))
+            except ValueError:
+                domains.append(d)
+        self._domains = tuple(domains)
         self._repos = set(roe.scope.repos)
         self._cloud_accounts = set(roe.scope.cloud_accounts)
         self._excluded_hosts = set(roe.exclusions.hosts)
