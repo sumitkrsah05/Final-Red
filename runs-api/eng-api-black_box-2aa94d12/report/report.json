@@ -1,0 +1,27 @@
+{
+  "engagement_id": "eng-api-black_box-2aa94d12",
+  "mode": "black_box",
+  "posture": {
+    "assets": 0,
+    "findings": 0,
+    "severity_counts": {},
+    "top_risk": 0.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [],
+  "attack_paths": [],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

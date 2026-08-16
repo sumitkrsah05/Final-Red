@@ -1,0 +1,293 @@
+{
+  "engagement_id": "eng-api-black_box-6d84bed6",
+  "mode": "black_box",
+  "posture": {
+    "assets": 3,
+    "findings": 10,
+    "severity_counts": {
+      "info": 10
+    },
+    "top_risk": 10.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-64dd417462d2",
+      "title": "Add DOM EventListener - Detection",
+      "severity": "info",
+      "asset": "https://www.esds.co.in",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1189"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-16f42e785e08",
+      "title": "HTTP Missing Security Headers",
+      "severity": "info",
+      "asset": "https://www.esds.co.in",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-69a79f1a1783",
+      "title": "Wappalyzer Technology Detection",
+      "severity": "info",
+      "asset": "https://www.esds.co.in",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-38099c4d2d59",
+      "title": "Weak HTTP Strict-Transport-Security - Detect",
+      "severity": "info",
+      "asset": "https://www.esds.co.in",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-770c4a7ab35a",
+      "title": "Missing Subresource Integrity",
+      "severity": "info",
+      "asset": "https://www.esds.co.in/",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1203"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-83ded071676c",
+      "title": "NPM package.json Disclosure",
+      "severity": "info",
+      "asset": "https://www.esds.co.in/package-lock.json",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1190"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-6bb870ce6950",
+      "title": "Detect SSL Certificate Issuer",
+      "severity": "info",
+      "asset": "www.esds.co.in:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-4b2412f14a54",
+      "title": "SSL DNS Names",
+      "severity": "info",
+      "asset": "www.esds.co.in:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-13df627fd22f",
+      "title": "TLS Version - Detect",
+      "severity": "info",
+      "asset": "www.esds.co.in:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-b3fdee20efa7",
+      "title": "Wildcard TLS Certificate",
+      "severity": "info",
+      "asset": "www.esds.co.in:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "www.esds.co.in",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-64dd417462d2",
+          "title": "Add DOM EventListener - Detection",
+          "technique_id": "T1189",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-83ded071676c",
+          "title": "NPM package.json Disclosure",
+          "technique_id": "T1190",
+          "tactic": "Initial Access",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-770c4a7ab35a",
+          "title": "Missing Subresource Integrity",
+          "technique_id": "T1203",
+          "tactic": "Execution",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-38099c4d2d59",
+          "title": "Weak HTTP Strict-Transport-Security - Detect",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-16f42e785e08",
+          "title": "HTTP Missing Security Headers",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-69a79f1a1783",
+          "title": "Wappalyzer Technology Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    },
+    {
+      "asset": "www.esds.co.in:443",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-13df627fd22f",
+          "title": "TLS Version - Detect",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-6bb870ce6950",
+          "title": "Detect SSL Certificate Issuer",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-4b2412f14a54",
+          "title": "SSL DNS Names",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-b3fdee20efa7",
+          "title": "Wildcard TLS Certificate",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

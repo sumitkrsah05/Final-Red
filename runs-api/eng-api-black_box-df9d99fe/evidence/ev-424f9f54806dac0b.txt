@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Fri Aug 14 13:13:52 2026 as: nmap -sV -T3 -p 80,443 -oX - www.esds.co.in -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - www.esds.co.in" start="1786693432" startstr="Fri Aug 14 13:13:52 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="115.124.98.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.esds.co.in" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1786693432" endtime="1786693445"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="115.124.98.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.esds.co.in" type="user"/>
+<hostname name="esds.co.in" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+</ports>
+<times srtt="4882" rttvar="5233" to="100000"/>
+</host>
+<runstats><finished time="1786693445" timestr="Fri Aug 14 13:14:05 2026" summary="Nmap done at Fri Aug 14 13:14:05 2026; 1 IP address (1 host up) scanned in 12.59 seconds" elapsed="12.59" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

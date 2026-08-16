@@ -1,0 +1,91 @@
+{
+  "engagement_id": "eng-api-black_box-502571a8",
+  "mode": "black_box",
+  "posture": {
+    "assets": 3,
+    "findings": 2,
+    "severity_counts": {
+      "info": 2
+    },
+    "top_risk": 10.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-6148c8959040",
+      "title": "SSH SHA-1 HMAC Algorithms Enabled",
+      "severity": "info",
+      "asset": "dev-aiops.enlight.dev:22",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-b6dbccfbc642",
+      "title": "WAF Detection",
+      "severity": "info",
+      "asset": "http://dev-aiops.enlight.dev",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "dev-aiops.enlight.dev:22",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-6148c8959040",
+          "title": "SSH SHA-1 HMAC Algorithms Enabled",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    },
+    {
+      "asset": "dev-aiops.enlight.dev",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-b6dbccfbc642",
+          "title": "WAF Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

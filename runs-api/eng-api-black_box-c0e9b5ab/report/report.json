@@ -1,0 +1,312 @@
+{
+  "engagement_id": "eng-api-black_box-c0e9b5ab",
+  "mode": "black_box",
+  "posture": {
+    "assets": 3,
+    "findings": 11,
+    "severity_counts": {
+      "low": 2,
+      "info": 9
+    },
+    "top_risk": 30.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-061e418c8d76",
+      "title": "Expired SSL Certificate",
+      "severity": "low",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-3bd4da4e7c07",
+      "title": "Weak Cipher Suites Detection",
+      "severity": "low",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 30.0,
+      "priority": "low",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-45dc6bd1e595",
+      "title": "Deprecated TLS Detection",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-8f634b8595c0",
+      "title": "Detect SSL Certificate Issuer",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-6f9153e250af",
+      "title": "SSL DNS Names",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-5e7f42be4802",
+      "title": "TLS Version - Detect",
+      "severity": "info",
+      "asset": "demo.testfire.net:443",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1046"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-78ace00f567a",
+      "title": "Apache Detection",
+      "severity": "info",
+      "asset": "https://demo.testfire.net",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-9c36b63f727f",
+      "title": "HTTP Missing Security Headers",
+      "severity": "info",
+      "asset": "https://demo.testfire.net",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-349442c5eca6",
+      "title": "Missing Cookie SameSite Strict",
+      "severity": "info",
+      "asset": "https://demo.testfire.net",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [
+        "T1203"
+      ],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-50364ffa6b5c",
+      "title": "WAF Detection",
+      "severity": "info",
+      "asset": "https://demo.testfire.net",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    },
+    {
+      "id": "find-6c0dd233cbae",
+      "title": "Public Swagger API - Detect",
+      "severity": "info",
+      "asset": "https://demo.testfire.net/swagger/index.html",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "demo.testfire.net:443",
+      "overall_risk": 30.0,
+      "steps": [
+        {
+          "finding_ref": "find-5e7f42be4802",
+          "title": "TLS Version - Detect",
+          "technique_id": "T1046",
+          "tactic": "Discovery",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-061e418c8d76",
+          "title": "Expired SSL Certificate",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-3bd4da4e7c07",
+          "title": "Weak Cipher Suites Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 30.0
+        },
+        {
+          "finding_ref": "find-45dc6bd1e595",
+          "title": "Deprecated TLS Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-8f634b8595c0",
+          "title": "Detect SSL Certificate Issuer",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-6f9153e250af",
+          "title": "SSL DNS Names",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    },
+    {
+      "asset": "demo.testfire.net",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-349442c5eca6",
+          "title": "Missing Cookie SameSite Strict",
+          "technique_id": "T1203",
+          "tactic": "Execution",
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-78ace00f567a",
+          "title": "Apache Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-9c36b63f727f",
+          "title": "HTTP Missing Security Headers",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-50364ffa6b5c",
+          "title": "WAF Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        },
+        {
+          "finding_ref": "find-6c0dd233cbae",
+          "title": "Public Swagger API - Detect",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

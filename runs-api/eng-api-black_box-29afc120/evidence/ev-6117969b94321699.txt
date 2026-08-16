@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Aug 13 17:53:21 2026 as: nmap -sV -T3 -p 80,443 -oX - www.esds.co.in -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - www.esds.co.in" start="1786623801" startstr="Thu Aug 13 17:53:21 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<runstats><finished time="1786623806" timestr="Thu Aug 13 17:53:26 2026" summary="Nmap done at Thu Aug 13 17:53:26 2026; 0 IP addresses (0 hosts up) scanned in 5.11 seconds" elapsed="5.11" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>
