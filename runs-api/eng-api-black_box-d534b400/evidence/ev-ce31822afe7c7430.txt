@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Sun Aug  9 16:15:38 2026 as: nmap -sV -T3 -p 8080,80,443 -oX - http://10.186.252.242:8080 -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 8080,80,443 -oX - http://10.186.252.242:8080" start="1786272338" startstr="Sun Aug  9 16:15:38 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="80,443,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<target specification="http://10.186.252.242:8080" status="skipped" reason="invalid"/>
+<runstats><finished time="1786272338" timestr="Sun Aug  9 16:15:38 2026" summary="Nmap done at Sun Aug  9 16:15:38 2026; 0 IP addresses (0 hosts up) scanned in 0.06 seconds" elapsed="0.06" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

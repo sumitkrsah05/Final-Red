@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Aug 13 17:05:58 2026 as: nmap -sV -T3 -p 80,443 -oX - www.esds.co.in -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - www.esds.co.in" start="1786620958" startstr="Thu Aug 13 17:05:58 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="104.26.13.190" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.esds.co.in" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1786620959" endtime="1786620972"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="104.26.13.190" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.esds.co.in" type="user"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Cloudflare http proxy" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Cloudflare http proxy" tunnel="ssl" method="probed" conf="10"/></port>
+</ports>
+<times srtt="14462" rttvar="9031" to="100000"/>
+</host>
+<runstats><finished time="1786620972" timestr="Thu Aug 13 17:06:12 2026" summary="Nmap done at Thu Aug 13 17:06:12 2026; 1 IP address (1 host up) scanned in 13.55 seconds" elapsed="13.55" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

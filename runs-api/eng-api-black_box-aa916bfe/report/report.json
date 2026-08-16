@@ -1,0 +1,61 @@
+{
+  "engagement_id": "eng-api-black_box-aa916bfe",
+  "mode": "black_box",
+  "posture": {
+    "assets": 0,
+    "findings": 1,
+    "severity_counts": {
+      "info": 1
+    },
+    "top_risk": 10.0
+  },
+  "detection_coverage": {
+    "total_actions": 0,
+    "coverage_pct": 0.0,
+    "mean_ttd_seconds": null,
+    "verdicts": {},
+    "gaps": []
+  },
+  "detection_index": {},
+  "attack_coverage_pct": 0.0,
+  "findings": [
+    {
+      "id": "find-8451cf7bdedb",
+      "title": "Wappalyzer Technology Detection",
+      "severity": "info",
+      "asset": "http://10.186.252.242:8080",
+      "cve_ids": [],
+      "cvss": null,
+      "epss": null,
+      "techniques": [],
+      "detection": "UNKNOWN",
+      "risk": 10.0,
+      "priority": "info",
+      "sources": [
+        "nuclei"
+      ]
+    }
+  ],
+  "attack_paths": [
+    {
+      "asset": "10.186.252.242:8080",
+      "overall_risk": 10.0,
+      "steps": [
+        {
+          "finding_ref": "find-8451cf7bdedb",
+          "title": "Wappalyzer Technology Detection",
+          "technique_id": null,
+          "tactic": null,
+          "detection": "UNKNOWN",
+          "risk": 10.0
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "gaps": [],
+  "numeric_verification": {
+    "ok": true,
+    "ungrounded": []
+  }
+}

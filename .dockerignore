@@ -1,0 +1,36 @@
+# Keep secrets, local venvs, and scan output out of the build context / image.
+# (Without this, `COPY . .` bakes .env + tens of MB of run artifacts into layers.)
+
+# Secrets & local env
+.env
+.env.*
+
+# Virtualenvs
+.venv/
+venv/
+
+# VCS & CI
+.git/
+.gitignore
+
+# Python caches / build metadata
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Scan output — mounted at runtime via docker-compose volumes, not baked in
+runs/
+runs-api/
+runs-agent/
+runs-attack/
+runs-llm/
+runs-test/
+
+# Editor / OS cruft
+.vscode/
+.idea/
+.DS_Store
+
+# Heavy docs not needed at runtime
+docs/

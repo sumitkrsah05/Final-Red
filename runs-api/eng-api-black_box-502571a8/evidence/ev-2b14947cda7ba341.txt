@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Sun Aug  9 12:04:53 2026 as: nmap -sV -T3 -p 80,443 -oX - dev-aiops.enlight.dev -->
+<nmaprun scanner="nmap" args="nmap -sV -T3 -p 80,443 -oX - dev-aiops.enlight.dev" start="1786257293" startstr="Sun Aug  9 12:04:53 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="115.124.125.46" addrtype="ipv4"/>
+<hostnames>
+<hostname name="dev-aiops.enlight.dev" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1786257294" endtime="1786257487"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="115.124.125.46" addrtype="ipv4"/>
+<hostnames>
+<hostname name="dev-aiops.enlight.dev" type="user"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.24.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.24.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="10342" rttvar="8543" to="100000"/>
+</host>
+<runstats><finished time="1786257487" timestr="Sun Aug  9 12:08:07 2026" summary="Nmap done at Sun Aug  9 12:08:07 2026; 1 IP address (1 host up) scanned in 193.65 seconds" elapsed="193.65" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
